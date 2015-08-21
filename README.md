@@ -1,6 +1,6 @@
-# pwm
+# powm
 
-pwm very simply generates reasonably secure passwords. That's it; that's
+powm very simply generates reasonably secure passwords. That's it; that's
 all it does.
 
 Passwords are chosen from the set of all upper-case letters except I and
@@ -13,22 +13,22 @@ lower-case letter, and one number, and to not repeat any characters.
 
 ## Usage
 
-Call pwm from the command line:
+Call powm from the command line:
 
 ```bash
-$ pwm
+$ powm
 h6ECtbDZPnRddHV7
 $ echo $?
 0
-$ pwm 8
+$ powm 8
 XdWod8f8
 $ echo $?
 0
-$ pwm 2
+$ powm 2
 Cannot generate password of length 2
 $ echo $?
 1
-$ pwm 100
+$ powm 100
 Cannot generate password of length 100
 $ echo $?
 1

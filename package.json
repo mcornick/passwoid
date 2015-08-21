@@ -1,5 +1,5 @@
 {
-  "name": "pwm",
+  "name": "powm",
   "version": "0.1.0",
   "description": "a simple password maker",
   "scripts": {
@@ -9,14 +9,14 @@
   "license": "ISC",
   "preferGlobal": true,
   "bin": {
-    "pwm": "index.js"
+    "powm": "index.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/markcornick/pwm.js.git"
+    "url": "git+https://github.com/markcornick/powm.git"
   },
   "bugs": {
-    "url": "https://github.com/markcornick/pwm.js/issues"
+    "url": "https://github.com/markcornick/powm/issues"
   },
-  "homepage": "https://github.com/markcornick/pwm.js#readme"
+  "homepage": "https://github.com/markcornick/powm#readme"
 }
