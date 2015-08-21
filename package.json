@@ -10,5 +10,13 @@
   "preferGlobal": true,
   "bin": {
     "pwm": "index.js"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/markcornick/pwm.js.git"
+  },
+  "bugs": {
+    "url": "https://github.com/markcornick/pwm.js/issues"
+  },
+  "homepage": "https://github.com/markcornick/pwm.js#readme"
 }
