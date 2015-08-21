@@ -9,6 +9,11 @@ fonts. I, l, and 1 are not used for the same reason. Passwords are guaranteed to
 contain at least one upper-case letter, one lower-case letter, and one number,
 and to not repeat any characters.
 
+The default length is 16. The minimum length is 3, because a shorter password
+would not satisfy the requirement to use all three classes of characters. The
+maximum length is 57, because a longer password would not satisfy the
+requirement to not repeat any characters.
+
 powm is based on [pwm](https://github.com/markcornick/pwm), my Ruby
 implementation of a similar concept. powm differs from pwm in that powm enforces
 the no-repeated-characters requirement, but pwm does not. (The name change is
@@ -36,11 +41,6 @@ Cannot generate password of length 100
 $ echo $?
 1
 ```
-
-The default length is 16. The minimum length is 3, because a shorter password
-would not satisfy the requirement to use all three classes of characters. The
-maximum length is 57, because a longer password would not satisfy the
-requirement to not repeat any characters.
 
 ## Author/License
 
