@@ -1,0 +1,14 @@
+{
+  "name": "pwm",
+  "version": "0.1.0",
+  "description": "a simple password maker",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Mark Cornick <mark@markcornick.com> (https://www.markcornick.com/)",
+  "license": "ISC",
+  "preferGlobal": true,
+  "bin": {
+    "pwm": "index.js"
+  }
+}
