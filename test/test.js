@@ -1,5 +1,3 @@
-#!/usr/bin/env node
-
 // Copyright (c) 2015 Mark Cornick <mark@markcornick.com>
 //
 // Permission to use, copy, modify, and/or distribute this software for any
@@ -14,16 +12,33 @@
 // OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
 // PERFORMANCE OF THIS SOFTWARE.
 
-var powm = require('./lib/powm')
+/* eslint-env mocha */
 
-var requestedLength = parseInt(process.argv[2], 10)
-if (isNaN(requestedLength)) {
-  requestedLength = 16
-}
+var powm = require('../lib/powm')
+var chai = require('chai')
 
-try {
-  console.log(powm(requestedLength))
-} catch (e) {
-  console.log(e.message)
-  process.exit(1)
-}
+describe('powm', function () {
+  it('should create a password of default length', function () {
+    chai.expect(
+      powm().length
+    ).to.equal(16)
+  })
+
+  it('should create a password of specific length', function () {
+    chai.expect(
+      powm(8).length
+    ).to.equal(8)
+  })
+
+  it('should throw an error when length is too short', function () {
+    chai.expect(function () {
+      powm(1)
+    }).to.throw('Cannot generate password of length 1')
+  })
+
+  it('should throw an error when length is too long', function () {
+    chai.expect(function () {
+      powm(100)
+    }).to.throw('Cannot generate password of length 100')
+  })
+})
