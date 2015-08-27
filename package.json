@@ -1,6 +1,6 @@
 {
   "name": "powm",
-  "version": "0.1.1",
+  "version": "1.0.0",
   "description": "a simple password maker",
   "scripts": {
     "test": "mocha"
