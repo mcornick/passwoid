@@ -1,5 +1,3 @@
-#!/usr/bin/env node
-
 // Copyright (c) 2015 Mark Cornick <mark@markcornick.com>
 //
 // Permission to use, copy, modify, and/or distribute this software for any
@@ -34,7 +32,7 @@ var BadLengthException = function (length) {
   this.name = 'BadLengthException'
 }
 
-var password = function (length) {
+module.exports = function (length) {
   if (length == null) {
     length = 16
   }
@@ -54,16 +52,4 @@ var password = function (length) {
     }
     return pw
   }
-}
-
-var requestedLength = parseInt(process.argv[2], 10)
-if (isNaN(requestedLength)) {
-  requestedLength = 16
-}
-
-try {
-  console.log(password(requestedLength))
-} catch (e) {
-  console.log(e.message)
-  process.exit(1)
 }
