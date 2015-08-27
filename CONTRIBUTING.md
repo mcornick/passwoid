@@ -15,10 +15,10 @@ you're not satisfied with my response to your problem with my free (as in beer
 and in speech) software, I will give you triple your $0.00 back.
 
 When filing a pull request, please explain what you're changing and why. Please
-limit your changes to the specific thing you're fixing; it's probably easiest
-for both of us if you isolate your change in a topic branch that I can merge
-without pulling in other stuff. Please do not update CHANGELOG, versions, etc.;
-I'll take care of that. I'll also add you to the Credits list with my thanks.
+use [JavaScript Standard Style](https://github.com/feross/standard) and add or
+update tests as needed. Please limit your changes to the specific thing you're
+fixing and isolate your changes in a topic branch that I can merge without
+pulling in other stuff.
 
 All of my JavaScript code uses the ISC license. If you submit a pull request,
 I'll assume you are OK with any code you add being placed under that same ISC

@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "a simple password maker",
   "scripts": {
-    "test": "mocha"
+    "test": "standard && mocha"
   },
   "author": "Mark Cornick <mark@markcornick.com> (https://www.markcornick.com/)",
   "license": "ISC",
@@ -21,6 +21,7 @@
   "homepage": "https://github.com/markcornick/powm#readme",
   "devDependencies": {
     "chai": "~3.2.0",
-    "mocha": "~2.2.5"
+    "mocha": "~2.2.5",
+    "standard": "~5.1.0"
   }
 }
