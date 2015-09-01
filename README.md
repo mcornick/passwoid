@@ -45,4 +45,4 @@ $ echo $?
 ## Author/License
 
 Mark Cornick <mark@markcornick.com>; licensed under the ISC license (please see
-the header in index.js.)
+the header in powm.js.)
