@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "a simple password maker",
   "scripts": {
-    "test": "standard && mocha"
+    "prepublish": "gulp prepublish",
+    "test": "gulp"
   },
   "author": "Mark Cornick <mark@markcornick.com> (https://www.markcornick.com/)",
   "license": "ISC",
@@ -20,8 +21,15 @@
   },
   "homepage": "https://github.com/markcornick/powm#readme",
   "devDependencies": {
-    "chai": "~3.2.0",
-    "mocha": "~2.2.5",
-    "standard": "~5.1.0"
+    "chai": "^3.2.0",
+    "gulp": "^3.9.0",
+    "gulp-coveralls": "^0.1.4",
+    "gulp-exclude-gitignore": "^1.0.0",
+    "gulp-istanbul": "^0.10.0",
+    "gulp-mocha": "^2.1.3",
+    "gulp-nsp": "^0.4.5",
+    "gulp-plumber": "^1.0.1",
+    "gulp-standard": "^5.1.0",
+    "mocha": "^2.3.0"
   }
 }
