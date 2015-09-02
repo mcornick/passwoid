@@ -46,8 +46,3 @@ $ powm 100
 Error: Cannot generate password of length 100
 [...]
 ```
-
-## Author/License
-
-Mark Cornick <mark@markcornick.com>; licensed under the ISC license (please see
-the header in powm.js.)
