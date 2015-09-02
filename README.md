@@ -31,20 +31,20 @@ $ npm install -g powm
 [...]
 $ powm
 h6ECtbDZPnRddHV7
-$ echo $?
-0
 $ powm 8
 XdWod8f8
-$ echo $?
-0
 $ powm 2
-Cannot generate password of length 2
-$ echo $?
-1
+/usr/local/lib/node_modules/powm/cli.js:28
+  throw(e);
+        ^
+Error: Cannot generate password of length 2
+[...]
 $ powm 100
-Cannot generate password of length 100
-$ echo $?
-1
+/usr/local/lib/node_modules/powm/cli.js:28
+  throw(e);
+        ^
+Error: Cannot generate password of length 100
+[...]
 ```
 
 ## Author/License

@@ -14,31 +14,33 @@
 
 /* eslint-env mocha */
 
-var powm = require('../lib/powm')
-var chai = require('chai')
+'use strict';
+
+var powm = require('../lib/powm');
+var chai = require('chai');
 
 describe('powm', function () {
   it('creates a password of default length', function () {
     chai.expect(
       powm().length
-    ).to.equal(16)
-  })
+    ).to.equal(16);
+  });
 
   it('creates a password of specific length', function () {
     chai.expect(
       powm(8).length
-    ).to.equal(8)
-  })
+    ).to.equal(8);
+  });
 
   it('throws an error when length is too short', function () {
     chai.expect(function () {
-      powm(1)
-    }).to.throw('Cannot generate password of length 1')
-  })
+      powm(1);
+    }).to.throw('Cannot generate password of length 1');
+  });
 
   it('throws an error when length is too long', function () {
     chai.expect(function () {
-      powm(100)
-    }).to.throw('Cannot generate password of length 100')
-  })
-})
+      powm(100);
+    }).to.throw('Cannot generate password of length 100');
+  });
+});

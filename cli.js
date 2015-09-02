@@ -6,7 +6,7 @@
 // purpose with or without fee is hereby granted, provided that the above
 // copyright notice and this permission notice appear in all copies.
 //
-// THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH
+// THE SOFTWARE IS PROVIDED 'AS IS' AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH
 // REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY
 // AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT,
 // INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM
@@ -14,16 +14,17 @@
 // OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
 // PERFORMANCE OF THIS SOFTWARE.
 
-var powm = require('./lib/powm')
+'use strict';
 
-var requestedLength = parseInt(process.argv[2], 10)
+var powm = require('./lib/powm');
+
+var requestedLength = parseInt(process.argv[2], 10);
 if (isNaN(requestedLength)) {
-  requestedLength = 16
+  requestedLength = 16;
 }
 
 try {
-  console.log(powm(requestedLength))
+  console.log(powm(requestedLength));
 } catch (e) {
-  console.log(e.message)
-  process.exit(1)
+  throw e;
 }
