@@ -24,11 +24,19 @@ implementation of a similar concept. powm differs from pwm in that powm enforces
 the no-repeated-characters requirement, but pwm does not. (The name change is
 because "pwm" was already taken as a package name on npm.)
 
-## Installation and Usage
+## Installation
+
+powm can be used either as a command-line utility, or programatically from your
+own code.
 
 ```bash
-$ npm install -g powm
-[...]
+$ npm install --global powm # for command-line usage
+$ npm install --save powm   # for programatic usage
+```
+
+## Command-Line Usage
+
+```bash
 $ powm
 h6ECtbDZPnRddHV7
 $ powm 8
@@ -45,4 +53,14 @@ $ powm 100
         ^
 Error: Cannot generate password of length 100
 [...]
+```
+
+## Programmatic Usage
+
+```js
+var powm = require('powm');
+
+powm();    // returns a password of the default length (16)
+powm(8);   // returns a password of length 8
+powm(128); // throws Error: Cannot generate password of length 128
 ```

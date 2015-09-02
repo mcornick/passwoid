@@ -8,7 +8,7 @@
   },
   "author": "Mark Cornick <mark@markcornick.com> (https://www.markcornick.com/)",
   "license": "ISC",
-  "preferGlobal": true,
+  "main": "lib/powm.js",
   "bin": {
     "powm": "cli.js"
   },
