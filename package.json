@@ -1,6 +1,6 @@
 {
   "name": "powm",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "a simple password maker",
   "scripts": {
     "prepublish": "gulp prepublish",
