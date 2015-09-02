@@ -23,8 +23,4 @@ if (isNaN(requestedLength)) {
   requestedLength = 16;
 }
 
-try {
-  console.log(powm(requestedLength));
-} catch (e) {
-  throw e;
-}
+console.log(powm(requestedLength));
