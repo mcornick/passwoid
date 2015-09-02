@@ -34,13 +34,13 @@ $ powm 8
 XdWod8f8
 $ powm 2
 /usr/local/lib/node_modules/powm/cli.js:28
-  throw(e);
+  throw e;
         ^
 Error: Cannot generate password of length 2
 [...]
 $ powm 100
 /usr/local/lib/node_modules/powm/cli.js:28
-  throw(e);
+  throw e;
         ^
 Error: Cannot generate password of length 100
 [...]
