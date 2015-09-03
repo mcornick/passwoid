@@ -18,6 +18,7 @@
 
 var powm = require('../lib/powm');
 var chai = require('chai');
+var uniq = require('lodash.uniq');
 
 describe('powm', function () {
   it('creates a password of default length', function () {
@@ -42,5 +43,19 @@ describe('powm', function () {
     chai.expect(function () {
       powm(100);
     }).to.throw('Cannot generate password of length 100');
+  });
+
+  it('creates a password with all three character classes', function () {
+    chai.expect(
+      powm()
+    ).to.match(/[A-Z]/).and
+     .to.match(/[a-z]/).and
+     .to.match(/\d/);
+  });
+
+  it('creates a password with no repeated characters', function () {
+    chai.expect(
+      uniq(powm().split('')).length
+    ).to.equal(16);
   });
 });
