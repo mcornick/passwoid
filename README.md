@@ -26,12 +26,12 @@ because "pwm" was already taken as a package name on npm.)
 
 ## Installation
 
-powm can be used either as a command-line utility, or programatically from your
+powm can be used either as a command-line utility, or programmatically from your
 own code.
 
 ```bash
 $ npm install --global powm # for command-line usage
-$ npm install --save powm   # for programatic usage
+$ npm install --save powm   # for programmatic usage
 ```
 
 ## Command-Line Usage
