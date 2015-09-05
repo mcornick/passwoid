@@ -1,11 +1,12 @@
 # powm
 
-[![npm version](https://badge.fury.io/js/powm.svg)](http://badge.fury.io/js/powm)
-[![Build Status](https://travis-ci.org/markcornick/powm.svg?branch=master)](https://travis-ci.org/markcornick/powm)
-[![Coverage Status](https://coveralls.io/repos/markcornick/powm/badge.svg?branch=master&service=github)](https://coveralls.io/github/markcornick/powm?branch=master)
-[![Code Climate](https://codeclimate.com/github/markcornick/powm/badges/gpa.svg)](https://codeclimate.com/github/markcornick/powm)
-[![Dependency Status](https://david-dm.org/markcornick/powm.svg)](https://david-dm.org/markcornick/powm)
-[![devDependency Status](https://david-dm.org/markcornick/powm/dev-status.svg)](https://david-dm.org/markcornick/powm#info=devDependencies)
+[![npm version](https://img.shields.io/npm/v/powm.svg?style=flat-square)](https://www.npmjs.com/package/powm)
+[![Build Status](https://img.shields.io/travis/markcornick/powm.svg?style=flat-square)](https://travis-ci.org/markcornick/powm)
+[![Coverage Status](https://img.shields.io/coveralls/markcornick/powm.svg?style=flat-square)](https://coveralls.io/github/markcornick/powm)
+[![Code Climate](https://img.shields.io/codeclimate/github/markcornick/powm.svg?style=flat-square)](https://codeclimate.com/github/markcornick/powm)
+[![Dependency Status](https://img.shields.io/david/markcornick/powm.svg?style=flat-square)](https://david-dm.org/markcornick/powm)
+[![devDependency Status](https://img.shields.io/david/dev/markcornick/powm.svg?style=flat-square)](https://david-dm.org/markcornick/powm#info=devDependencies)
+[![ISC License](https://img.shields.io/github/license/markcornick/powm.svg?style=flat-square)](https://github.com/markcornick/powm/blob/master/LICENSE)
 
 powm generates reasonably secure passwords. That's it; that's all it does.
 
