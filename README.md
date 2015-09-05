@@ -4,6 +4,8 @@
 [![Build Status](https://travis-ci.org/markcornick/powm.svg?branch=master)](https://travis-ci.org/markcornick/powm)
 [![Coverage Status](https://coveralls.io/repos/markcornick/powm/badge.svg?branch=master&service=github)](https://coveralls.io/github/markcornick/powm?branch=master)
 [![Code Climate](https://codeclimate.com/github/markcornick/powm/badges/gpa.svg)](https://codeclimate.com/github/markcornick/powm)
+[![Dependency Status](https://david-dm.org/markcornick/powm.svg)](https://david-dm.org/markcornick/powm)
+[![devDependency Status](https://david-dm.org/markcornick/powm/dev-status.svg)](https://david-dm.org/markcornick/powm#info=devDependencies)
 
 powm generates reasonably secure passwords. That's it; that's all it does.
 
