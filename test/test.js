@@ -33,16 +33,22 @@ describe('powm', function () {
     ).to.equal(8);
   });
 
+  it('creates a password longer than the pool of characters', function () {
+    chai.expect(
+      powm(64).length
+    ).to.equal(64);
+  });
+
   it('throws an error when length is too short', function () {
     chai.expect(function () {
       powm(1);
     }).to.throw('Cannot generate password of length 1');
   });
 
-  it('throws an error when length is too long', function () {
+  it('does not throw an error when length is longer than pool', function () {
     chai.expect(function () {
-      powm(100);
-    }).to.throw('Cannot generate password of length 100');
+      powm(64);
+    }).not.to.throw();
   });
 
   it('creates a password with all three character classes', function () {
@@ -53,9 +59,15 @@ describe('powm', function () {
      .to.match(/\d/);
   });
 
-  it('creates a password with no repeated characters', function () {
+  it('does not repeat characters if length is <= that of pool', function () {
     chai.expect(
-      uniq(powm().split('')).length
+      uniq(powm(16).split('')).length
     ).to.equal(16);
+  });
+
+  it('repeats characters if length is > that of pool', function () {
+    chai.expect(
+      uniq(powm(64).split('')).length
+    ).not.to.equal(64);
   });
 });
