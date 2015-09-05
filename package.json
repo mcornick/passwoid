@@ -1,12 +1,20 @@
 {
   "name": "powm",
   "version": "1.1.2",
-  "description": "a simple password maker",
+  "description": "A reasonably secure password maker",
+  "keywords": [
+    "random",
+    "password"
+  ],
   "scripts": {
     "prepublish": "gulp prepublish",
     "test": "gulp"
   },
-  "author": "Mark Cornick <mark@markcornick.com> (https://www.markcornick.com/)",
+  "author": {
+    "name": "Mark Cornick",
+    "email": "mark@markcornick.com",
+    "url": "http://www.markcornick.com/"
+  },
   "license": "ISC",
   "main": "lib/powm.js",
   "bin": {
