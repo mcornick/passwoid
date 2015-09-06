@@ -61,7 +61,7 @@ Error: Cannot generate password of length 1
 ```js
 var powm = require('powm');
 
-powm();    // returns a password of the default length (16)
-powm(8);   // returns a password of length 8
+powm();  // returns a password of the default length (16)
+powm(8); // returns a password of length 8
 powm(1); // throws Error: Cannot generate password of length 1
 ```
