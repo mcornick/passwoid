@@ -27,6 +27,7 @@ var testCli = function (options) {
     argv: options.argv,
     stdout: stdout
   });
+  // expect requested length + 1 (for the newline)
   chai.expect(stdout.capturedData.length).to.equal(options.length + 1);
 };
 
