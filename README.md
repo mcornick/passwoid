@@ -37,8 +37,8 @@ powm can be used either as a command-line utility, or programmatically from your
 own code.
 
 ```bash
-$ npm install --global powm # for command-line usage
-$ npm install --save powm   # for programmatic usage
+npm install --global powm # for command-line usage
+npm install --save powm   # for programmatic usage
 ```
 
 ## Command-Line Usage
