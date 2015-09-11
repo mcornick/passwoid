@@ -9,6 +9,7 @@ var istanbul = require('gulp-istanbul');
 var nsp = require('gulp-nsp');
 var plumber = require('gulp-plumber');
 var coveralls = require('gulp-coveralls');
+var alex = require('gulp-alex');
 
 gulp.task('static', function () {
   return gulp.src('**/*.js')
@@ -16,6 +17,11 @@ gulp.task('static', function () {
     .pipe(eslint())
     .pipe(eslint.format())
     .pipe(eslint.failAfterError());
+});
+
+gulp.task('alex', function () {
+  return gulp.src('*.md')
+    .pipe(alex({quiet: true}));
 });
 
 gulp.task('nsp', function (cb) {
@@ -52,4 +58,4 @@ gulp.task('coveralls', ['test'], function () {
 });
 
 gulp.task('prepublish', ['nsp']);
-gulp.task('default', ['static', 'test', 'coveralls']);
+gulp.task('default', ['static', 'alex', 'test', 'coveralls']);
