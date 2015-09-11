@@ -2,7 +2,7 @@
 
 var path = require('path');
 var gulp = require('gulp');
-var eslint = require('gulp-eslint');
+var xo = require('gulp-xo');
 var excludeGitignore = require('gulp-exclude-gitignore');
 var mocha = require('gulp-mocha');
 var istanbul = require('gulp-istanbul');
@@ -14,9 +14,7 @@ var alex = require('gulp-alex');
 gulp.task('static', function () {
   return gulp.src('**/*.js')
     .pipe(excludeGitignore())
-    .pipe(eslint())
-    .pipe(eslint.format())
-    .pipe(eslint.failAfterError());
+    .pipe(xo({quiet: true}));
 });
 
 gulp.task('alex', function () {
