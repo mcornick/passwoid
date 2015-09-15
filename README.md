@@ -3,7 +3,6 @@
 [![npm version](https://img.shields.io/npm/v/powm.svg?style=flat-square)](https://www.npmjs.com/package/powm)
 [![Build Status](https://img.shields.io/travis/markcornick/powm.svg?style=flat-square)](https://travis-ci.org/markcornick/powm)
 [![Coverage Status](https://img.shields.io/coveralls/markcornick/powm.svg?style=flat-square)](https://coveralls.io/github/markcornick/powm)
-[![Code Climate](https://img.shields.io/codeclimate/github/markcornick/powm.svg?style=flat-square)](https://codeclimate.com/github/markcornick/powm)
 [![Dependency Status](https://img.shields.io/david/markcornick/powm.svg?style=flat-square)](https://david-dm.org/markcornick/powm)
 [![devDependency Status](https://img.shields.io/david/dev/markcornick/powm.svg?style=flat-square)](https://david-dm.org/markcornick/powm#info=devDependencies)
 [![ISC License](https://img.shields.io/github/license/markcornick/powm.svg?style=flat-square)](https://github.com/markcornick/powm/blob/master/LICENSE)
