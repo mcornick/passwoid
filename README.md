@@ -1,11 +1,6 @@
-# powm
+# powm [![Build Status](https://travis-ci.org/markcornick/powm.svg)](https://travis-ci.org/markcornick/powm) [![Coverage Status](https://coveralls.io/repos/markcornick/powm/badge.svg?branch=master&service=github)](https://coveralls.io/github/markcornick/powm?branch=master)
 
-[![npm version](https://img.shields.io/npm/v/powm.svg?style=flat-square)](https://www.npmjs.com/package/powm)
-[![Build Status](https://img.shields.io/travis/markcornick/powm.svg?style=flat-square)](https://travis-ci.org/markcornick/powm)
-[![Coverage Status](https://img.shields.io/coveralls/markcornick/powm.svg?style=flat-square)](https://coveralls.io/github/markcornick/powm)
-[![Dependency Status](https://img.shields.io/david/markcornick/powm.svg?style=flat-square)](https://david-dm.org/markcornick/powm)
-[![devDependency Status](https://img.shields.io/david/dev/markcornick/powm.svg?style=flat-square)](https://david-dm.org/markcornick/powm#info=devDependencies)
-[![ISC License](https://img.shields.io/github/license/markcornick/powm.svg?style=flat-square)](https://github.com/markcornick/powm/blob/master/LICENSE)
+> A reasonably secure password maker
 
 powm generates reasonably secure passwords. That's it; that's all it does.
 
