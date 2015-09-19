@@ -14,51 +14,51 @@
 
 /* eslint-env mocha */
 
-'use strict';
+'use strict'
 
-var cli = require('../lib/cli');
-var chai = require('chai');
-var stream = require('mock-utf8-stream');
+var cli = require('../lib/cli')
+var chai = require('chai')
+var stream = require('mock-utf8-stream')
 
 var testCli = function (options) {
-  var stdout = new stream.MockWritableStream();
-  stdout.startCapture();
+  var stdout = new stream.MockWritableStream()
+  stdout.startCapture()
   cli({
     argv: options.argv,
     stdout: stdout
-  });
+  })
   // expect requested length + 1 (for the newline)
-  chai.expect(stdout.capturedData.length).to.equal(options.length + 1);
-};
+  chai.expect(stdout.capturedData.length).to.equal(options.length + 1)
+}
 
 describe('cli', function () {
   it('given no length, creates a password of default length', function () {
     testCli({
       argv: ['node', 'bin.js'],
       length: 16
-    });
-  });
+    })
+  })
 
   it('given a specific length, creates a password of that length', function () {
     testCli({
       argv: ['node', 'bin.js', 8],
       length: 8
-    });
-  });
+    })
+  })
 
   it('given a bogus length, creates a password of default length', function () {
     testCli({
       argv: ['node', 'bin.js', 'pants'],
       length: 16
-    });
-  });
+    })
+  })
 
   it('given a too-short length, throws an error', function () {
     chai.expect(function () {
       cli({
         argv: ['node', 'bin.js', 1],
         stdout: new stream.MockWritableStream()
-      });
-    }).to.throw('Cannot generate password of length 1');
-  });
-});
+      })
+    }).to.throw('Cannot generate password of length 1')
+  })
+})

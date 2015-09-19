@@ -14,11 +14,11 @@
 // OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
 // PERFORMANCE OF THIS SOFTWARE.
 
-'use strict';
+'use strict'
 
-var cli = require('./lib/cli');
+var cli = require('./lib/cli')
 
 cli({
   stdout: process.stdout,
   argv: process.argv
-});
+})
