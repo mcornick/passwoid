@@ -1,5 +1,8 @@
 language: node_js
 node_js:
-  - '0.10'
-  - '0.12'
-  - '4.1'
+- '0.10'
+- '0.12'
+- '4.1'
+notifications:
+  slack:
+    secure: YmHXuMjEjC9WoH7y+dpsgBlLmptHPUcyviUTkGPHVxtEiFEqojWQ0hgglJdjf5cBM92+69g8NxmjW2gYBbHoUZ3L6pJmX+jiSAymhDncWqvc7Y+fTxS+LYRKrzsISbCCnIAX9nvW2FkHfRq7sq1HLtPQSwS++0umeDO0vgrtz/tW6nRIibEeLhAmyS5+7db1+PSa8noQoofqOJhYNoprGZ30jcteq0xsE+t2viibgNhlRiSpRnyOFi75ptDZFO5bHo4SvNfht1aAIzGrwAjKS2viUGcW5h7OQapzObOzLsPDvEGEdMHQQJVyL5mJwY7WrjE8vtZq+78G9rCB3jQNEpG6GHjpWSYoujpQRqlShlhjfSWN2vjEjISg1/CnNypcJHT8/ohOyrcyjZtJDqToipIxOU1laLN32n14oMyX6pO3acbbDEdhfmuXltjhA1XyVEqe6PswnsQUOW+nqzYxHmzbHtBmaUE2YPL/8QRFYKVp91ZbbP4SBQcNCSrbz/PAgJUNt2LienYEL2Yusel8fPkbvGi52e1tTjghiQVJa+OF5fO6ryDK02KfDJw+VSNIrzWj5WocIuJ7t/4SCyteFOV7eTBtgujnr3tTlqZruFM1MQcFSrtF+EUMIUNyuIKLxaQWIIqSObrmlmPlE7pn0aQ3wU7HmAbTWa4THnyKm+g=
