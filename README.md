@@ -59,3 +59,15 @@ powm();  // returns a password of the default length (16)
 powm(8); // returns a password of length 8
 powm(1); // throws Error: Cannot generate password of length 1
 ```
+
+## Contributing
+
+Bug reports and pull requests are welcome on GitHub at
+<https://github.com/markcornick/hashipkg>. This project is intended to be a
+safe, welcoming space for collaboration, and contributors are expected to adhere
+to the [Contributor Covenant](contributor-covenant.org) code of conduct.
+
+## License
+
+The gem is available as open source under the terms of the [ISC
+License](http://opensource.org/licenses/ISC).
