@@ -63,7 +63,7 @@ powm(1); // throws Error: Cannot generate password of length 1
 ## Contributing
 
 Bug reports and pull requests are welcome on GitHub at
-<https://github.com/markcornick/hashipkg>. This project is intended to be a
+<https://github.com/markcornick/powm>. This project is intended to be a
 safe, welcoming space for collaboration, and contributors are expected to adhere
 to the [Contributor Covenant](contributor-covenant.org) code of conduct.
 
