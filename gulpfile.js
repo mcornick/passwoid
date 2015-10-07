@@ -2,7 +2,7 @@
 
 var path = require('path')
 var gulp = require('gulp')
-var eslint = require('gulp-eslint')
+var standard = require('gulp-standard')
 var excludeGitignore = require('gulp-exclude-gitignore')
 var mocha = require('gulp-mocha')
 var istanbul = require('gulp-istanbul')
@@ -13,9 +13,8 @@ var coveralls = require('gulp-coveralls')
 gulp.task('static', function () {
   return gulp.src('**/*.js')
     .pipe(excludeGitignore())
-    .pipe(eslint())
-    .pipe(eslint.format())
-    .pipe(eslint.failAfterError())
+    .pipe(standard())
+    .pipe(standard.reporter('default', {breakOnError: true}))
 })
 
 gulp.task('nsp', function (cb) {
