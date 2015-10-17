@@ -9,12 +9,18 @@ var istanbul = require('gulp-istanbul')
 var nsp = require('gulp-nsp')
 var plumber = require('gulp-plumber')
 var coveralls = require('gulp-coveralls')
+var alex = require('gulp-alex')
 
 gulp.task('static', function () {
   return gulp.src('**/*.js')
     .pipe(excludeGitignore())
     .pipe(standard())
     .pipe(standard.reporter('default', {breakOnError: true}))
+})
+
+gulp.task('alex', function () {
+  return gulp.src('*.md')
+    .pipe(alex({fail: true}))
 })
 
 gulp.task('nsp', function (cb) {
@@ -51,4 +57,4 @@ gulp.task('coveralls', ['test'], function () {
 })
 
 gulp.task('prepublish', ['nsp'])
-gulp.task('default', ['static', 'test', 'coveralls'])
+gulp.task('default', ['static', 'alex', 'test', 'coveralls'])
