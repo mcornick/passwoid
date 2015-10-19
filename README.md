@@ -69,5 +69,5 @@ to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
 ## License
 
-The gem is available as open source under the terms of the [ISC
+powm is available as open source under the terms of the [ISC
 License](http://opensource.org/licenses/ISC).
