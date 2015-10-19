@@ -27,8 +27,7 @@ var testCli = function (options) {
     argv: options.argv,
     stdout: stdout
   })
-  // expect requested length + 1 (for the newline)
-  chai.expect(stdout.capturedData.length).to.equal(options.length + 1)
+  chai.expect(stdout.capturedData.trim().length).to.equal(options.length)
 }
 
 describe('cli', function () {
