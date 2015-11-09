@@ -7,8 +7,8 @@
     "password"
   ],
   "scripts": {
-    "prepublish": "gulp prepublish",
-    "test": "gulp"
+    "test": "xo && nyc ava && alex",
+    "coverage": "nyc report --reporter=text-lcov | coveralls"
   },
   "author": {
     "name": "Mark Cornick",
@@ -29,16 +29,13 @@
   },
   "homepage": "https://github.com/markcornick/powm#readme",
   "devDependencies": {
-    "gulp": "^3.9.0",
-    "gulp-alex": "^2.0.0",
-    "gulp-ava": "^0.3.0",
-    "gulp-coveralls": "^0.1.4",
-    "gulp-exclude-gitignore": "^1.0.0",
-    "gulp-istanbul": "^0.10.0",
-    "gulp-nsp": "^2.0.1",
-    "gulp-xo": "^0.5.0",
+    "alex": "^1.5.0",
+    "ava": "^0.4.2",
+    "coveralls": "^2.11.4",
     "lodash.uniq": "^3.2.2",
-    "mock-utf8-stream": "^0.1.1"
+    "mock-utf8-stream": "^0.1.1",
+    "nyc": "^3.2.2",
+    "xo": "^0.10.1"
   },
   "xo": {
     "space": true
