@@ -18,33 +18,33 @@ var cli = require('../lib/cli');
 var test = require('ava');
 var stream = require('mock-utf8-stream');
 
-test.beforeEach('set up stdout', t => {
+test.beforeEach('set up stdout', function (t) {
   t.context.stdout = new stream.MockWritableStream();
   t.context.stdout.startCapture();
   t.end();
 });
 
-test('given no length, creates a password of default length', t => {
+test('given no length, creates a password of default length', function (t) {
   t.plan(1);
   cli({argv: ['node', 'bin.js'], stdout: t.context.stdout});
   t.is(t.context.stdout.capturedData.trim().length, 16);
 });
 
-test('given a specific length, creates a password of that length', t => {
+test('given a specific length, creates a password of that length', function (t) {
   t.plan(1);
   cli({argv: ['node', 'bin.js', 8], stdout: t.context.stdout});
   t.is(t.context.stdout.capturedData.trim().length, 8);
 });
 
-test('given a bogus length, creates a password of default length', t => {
+test('given a bogus length, creates a password of default length', function (t) {
   t.plan(1);
   cli({argv: ['node', 'bin.js', 'pants'], stdout: t.context.stdout});
   t.is(t.context.stdout.capturedData.trim().length, 16);
 });
 
-test('given a too-short length, throws an error', t => {
+test('given a too-short length, throws an error', function (t) {
   t.plan(1);
-  t.throws(() => {
+  t.throws(function () {
     cli({argv: ['node', 'bin.js', 1], stdout: t.context.stdout});
   }, 'Cannot generate password of length 1');
 });
