@@ -12,51 +12,55 @@
 // OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
 // PERFORMANCE OF THIS SOFTWARE.
 
-'use strict'
+'use strict';
 
-var powm = require('../lib/powm')
-var test = require('ava')
-var uniq = require('lodash.uniq')
+var powm = require('../lib/powm');
+var test = require('ava');
+var uniq = require('lodash.uniq');
 
 test('creates a password of default length', function (t) {
-  t.same(powm().length, 16)
-  t.end()
-})
+  t.same(powm().length, 16);
+  t.end();
+});
 
 test('creates a password of specific length', function (t) {
-  t.same(powm(8).length, 8)
-  t.end()
-})
+  t.same(powm(8).length, 8);
+  t.end();
+});
 
 test('creates a password longer than the pool of characters', function (t) {
-  t.same(powm(64).length, 64)
-  t.end()
-})
+  t.same(powm(64).length, 64);
+  t.end();
+});
 
 test('throws an error when length is too short', function (t) {
-  t.throws(function () { powm(1) }, 'Cannot generate password of length 1')
-  t.end()
-})
+  t.throws(function () {
+    powm(1);
+  }, 'Cannot generate password of length 1');
+  t.end();
+});
 
 test('does not throw an error when length is longer than pool', function (t) {
-  t.doesNotThrow(function () { powm(64) })
-  t.end()
-})
+  t.doesNotThrow(function () {
+    powm(64);
+  });
+  t.end();
+});
 
 test('creates a password with all three character classes', function (t) {
-  var password = powm()
-  t.regexTest(/[A-Z]/, password)
-  t.regexTest(/[a-z]/, password)
-  t.regexTest(/\d/, password)
-  t.end()
-})
+  var password = powm();
+  t.regexTest(/[A-Z]/, password);
+  t.regexTest(/[a-z]/, password);
+  t.regexTest(/\d/, password);
+  t.end();
+});
 
 test('does not repeat characters if length is <= that of pool', function (t) {
-  t.same(uniq(powm(16).split('')).length, 16)
-  t.end()
-})
+  t.same(uniq(powm(16).split('')).length, 16);
+  t.end();
+});
 
 test('repeats characters if length is > that of pool', function (t) {
-  t.notSame(uniq(powm(64).split('')).length, 64)
-  t.end()
-})
+  t.notSame(uniq(powm(64).split('')).length, 64);
+  t.end();
+});
