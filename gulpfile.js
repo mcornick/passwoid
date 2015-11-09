@@ -21,7 +21,9 @@ gulp.task('static', function () {
 
 gulp.task('alex', function () {
   return gulp.src('*.md')
-    .pipe(alex({fail: true}))
+    .pipe(alex())
+    .pipe(alex.reporter())
+    .pipe(alex.reporter('fail'))
 })
 
 gulp.task('nsp', function (cb) {
