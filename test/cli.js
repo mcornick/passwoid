@@ -12,52 +12,41 @@
 // OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
 // PERFORMANCE OF THIS SOFTWARE.
 
-/* eslint-env mocha */
-
 'use strict'
 
 var cli = require('../lib/cli')
-var chai = require('chai')
+var test = require('ava')
 var stream = require('mock-utf8-stream')
 
-var testCli = function (options) {
+test('given no length, creates a password of default length', function (t) {
   var stdout = new stream.MockWritableStream()
   stdout.startCapture()
-  cli({
-    argv: options.argv,
-    stdout: stdout
-  })
-  chai.expect(stdout.capturedData.trim().length).to.equal(options.length)
-}
+  cli({ argv: ['node', 'bin.js'], stdout: stdout })
+  t.same(stdout.capturedData.trim().length, 16)
+  t.end()
+})
 
-describe('cli', function () {
-  it('given no length, creates a password of default length', function () {
-    testCli({
-      argv: ['node', 'bin.js'],
-      length: 16
-    })
-  })
+test('given a specific length, creates a password of that length', function (t) {
+  var stdout = new stream.MockWritableStream()
+  stdout.startCapture()
+  cli({ argv: ['node', 'bin.js', 8], stdout: stdout })
+  t.same(stdout.capturedData.trim().length, 8)
+  t.end()
+})
 
-  it('given a specific length, creates a password of that length', function () {
-    testCli({
-      argv: ['node', 'bin.js', 8],
-      length: 8
-    })
-  })
+test('given a bogus length, creates a password of default length', function (t) {
+  var stdout = new stream.MockWritableStream()
+  stdout.startCapture()
+  cli({ argv: ['node', 'bin.js', 'pants'], stdout: stdout })
+  t.same(stdout.capturedData.trim().length, 16)
+  t.end()
+})
 
-  it('given a bogus length, creates a password of default length', function () {
-    testCli({
-      argv: ['node', 'bin.js', 'pants'],
-      length: 16
-    })
-  })
-
-  it('given a too-short length, throws an error', function () {
-    chai.expect(function () {
-      cli({
-        argv: ['node', 'bin.js', 1],
-        stdout: new stream.MockWritableStream()
-      })
-    }).to.throw('Cannot generate password of length 1')
-  })
+test('given a too-short length, throws an error', function (t) {
+  var stdout = new stream.MockWritableStream()
+  t.throws(
+    function () {
+      cli({ argv: ['node', 'bin.js', 1], stdout: stdout })
+    }, 'Cannot generate password of length 1')
+  t.end()
 })
