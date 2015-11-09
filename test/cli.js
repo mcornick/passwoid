@@ -44,7 +44,7 @@ test('given a bogus length, creates a password of default length', t => {
 
 test('given a too-short length, throws an error', t => {
   t.plan(1);
-  t.throws(function () {
+  t.throws(() => {
     cli({argv: ['node', 'bin.js', 1], stdout: t.context.stdout});
   }, 'Cannot generate password of length 1');
 });
