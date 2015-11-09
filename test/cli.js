@@ -19,34 +19,34 @@ var test = require('ava');
 var stream = require('mock-utf8-stream');
 
 test('given no length, creates a password of default length', function (t) {
+  t.plan(1);
   var stdout = new stream.MockWritableStream();
   stdout.startCapture();
   cli({argv: ['node', 'bin.js'], stdout: stdout});
-  t.same(stdout.capturedData.trim().length, 16);
-  t.end();
+  t.is(stdout.capturedData.trim().length, 16);
 });
 
 test('given a specific length, creates a password of that length', function (t) {
+  t.plan(1);
   var stdout = new stream.MockWritableStream();
   stdout.startCapture();
   cli({argv: ['node', 'bin.js', 8], stdout: stdout});
-  t.same(stdout.capturedData.trim().length, 8);
-  t.end();
+  t.is(stdout.capturedData.trim().length, 8);
 });
 
 test('given a bogus length, creates a password of default length', function (t) {
+  t.plan(1);
   var stdout = new stream.MockWritableStream();
   stdout.startCapture();
   cli({argv: ['node', 'bin.js', 'pants'], stdout: stdout});
-  t.same(stdout.capturedData.trim().length, 16);
-  t.end();
+  t.is(stdout.capturedData.trim().length, 16);
 });
 
 test('given a too-short length, throws an error', function (t) {
+  t.plan(1);
   var stdout = new stream.MockWritableStream();
   t.throws(
     function () {
       cli({argv: ['node', 'bin.js', 1], stdout: stdout});
     }, 'Cannot generate password of length 1');
-  t.end();
 });
