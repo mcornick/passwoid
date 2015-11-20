@@ -12,14 +12,12 @@
 // OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
 // PERFORMANCE OF THIS SOFTWARE.
 
-'use strict';
+import powm from './powm';
 
-var powm = require('./powm');
-
-module.exports = function (options) {
-	var requestedLength = parseInt(options.argv[2], 10);
+export default function (options) {
+	let requestedLength = parseInt(options.argv[2], 10);
 	if (isNaN(requestedLength)) {
 		requestedLength = 16;
 	}
 	options.stdout.write(powm(requestedLength) + '\n');
-};
+}

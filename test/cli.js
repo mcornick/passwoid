@@ -14,14 +14,12 @@
 
 /* eslint-env mocha */
 
-'use strict';
+import chai from 'chai';
+import cli from '../lib/cli';
+import stream from 'mock-utf8-stream';
 
-var cli = require('../lib/cli');
-var chai = require('chai');
-var stream = require('mock-utf8-stream');
-
-var testCli = function (options) {
-	var stdout = new stream.MockWritableStream();
+const testCli = options => {
+	const stdout = new stream.MockWritableStream();
 	stdout.startCapture();
 	cli({
 		argv: options.argv,
@@ -30,30 +28,30 @@ var testCli = function (options) {
 	chai.expect(stdout.capturedData.trim().length).to.equal(options.length);
 };
 
-describe('cli', function () {
-	it('given no length, creates a password of default length', function () {
+describe('cli', () => {
+	it('given no length, creates a password of default length', () => {
 		testCli({
 			argv: ['node', 'bin.js'],
 			length: 16
 		});
 	});
 
-	it('given a specific length, creates a password of that length', function () {
+	it('given a specific length, creates a password of that length', () => {
 		testCli({
 			argv: ['node', 'bin.js', 8],
 			length: 8
 		});
 	});
 
-	it('given a bogus length, creates a password of default length', function () {
+	it('given a bogus length, creates a password of default length', () => {
 		testCli({
 			argv: ['node', 'bin.js', 'pants'],
 			length: 16
 		});
 	});
 
-	it('given a too-short length, throws an error', function () {
-		chai.expect(function () {
+	it('given a too-short length, throws an error', () => {
+		chai.expect(() => {
 			cli({
 				argv: ['node', 'bin.js', 1],
 				stdout: new stream.MockWritableStream()

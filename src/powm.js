@@ -12,49 +12,47 @@
 // OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
 // PERFORMANCE OF THIS SOFTWARE.
 
-'use strict';
-
-var defaultPool = function (length) {
-	var alphabet = 'ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz23456789';
-	var repeats = parseInt((length - 1) / alphabet.length, 10) + 1;
-	var pool = [];
-	for (var i = 1; i <= repeats; i++) {
+function defaultPool(length) {
+	const alphabet = 'ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz23456789';
+	const repeats = parseInt((length - 1) / alphabet.length, 10) + 1;
+	let pool = [];
+	for (let i = 1; i <= repeats; i++) {
 		pool = pool.concat(alphabet.split(''));
 	}
 	return pool;
-};
+}
 
-var randomCharacter = function (pool) {
-	var index = Math.floor(Math.random() * pool.length);
-	var character = pool[index];
+function randomCharacter(pool) {
+	const index = Math.floor(Math.random() * pool.length);
+	const character = pool[index];
 	pool.splice(index, 1);
 	return character;
-};
+}
 
-var acceptable = function (pw) {
+function acceptable(pw) {
 	return pw.match(/[A-Z]/) && pw.match(/[a-z]/) && pw.match(/\d/);
-};
+}
 
-var generatePassword = function (pool, length) {
-	var results = [];
-	for (var i = 1; i <= length; i++) {
+function generatePassword(pool, length) {
+	let results = [];
+	for (let i = 1; i <= length; i++) {
 		results.push(randomCharacter(pool));
 	}
 	return results.join('');
-};
+}
 
-module.exports = function (length) {
+export default function (length) {
 	if (typeof length === 'undefined') {
 		length = 16;
 	}
 	if (length < 3) {
 		throw new Error('Cannot generate password of length ' + length);
 	} else {
-		var password = '';
+		let password = '';
 		while (!acceptable(password)) {
-			var currentPool = defaultPool(length);
+			let currentPool = defaultPool(length);
 			password = generatePassword(currentPool, length);
 		}
 		return password;
 	}
-};
+}
