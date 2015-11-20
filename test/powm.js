@@ -33,7 +33,7 @@ test('length longer than pool length', t => {
 
 test('length too short', t => {
 	t.plan(1);
-	t.throws(function () {
+	t.throws(() => {
 		powm(1);
 	}, 'Cannot generate password of length 1');
 });
