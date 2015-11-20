@@ -19,32 +19,32 @@ var test = require('ava');
 var stream = require('mock-utf8-stream');
 
 test.beforeEach(function (t) {
-  t.context.stdout = new stream.MockWritableStream();
-  t.context.stdout.startCapture();
-  t.end();
+	t.context.stdout = new stream.MockWritableStream();
+	t.context.stdout.startCapture();
+	t.end();
 });
 
 test('default length', function (t) {
-  t.plan(1);
-  cli({argv: ['node', 'bin.js'], stdout: t.context.stdout});
-  t.is(t.context.stdout.capturedData.trim().length, 16);
+	t.plan(1);
+	cli({argv: ['node', 'bin.js'], stdout: t.context.stdout});
+	t.is(t.context.stdout.capturedData.trim().length, 16);
 });
 
 test('specific length', function (t) {
-  t.plan(1);
-  cli({argv: ['node', 'bin.js', 8], stdout: t.context.stdout});
-  t.is(t.context.stdout.capturedData.trim().length, 8);
+	t.plan(1);
+	cli({argv: ['node', 'bin.js', 8], stdout: t.context.stdout});
+	t.is(t.context.stdout.capturedData.trim().length, 8);
 });
 
 test('bogus length', function (t) {
-  t.plan(1);
-  cli({argv: ['node', 'bin.js', 'pants'], stdout: t.context.stdout});
-  t.is(t.context.stdout.capturedData.trim().length, 16);
+	t.plan(1);
+	cli({argv: ['node', 'bin.js', 'pants'], stdout: t.context.stdout});
+	t.is(t.context.stdout.capturedData.trim().length, 16);
 });
 
 test('length too short', function (t) {
-  t.plan(1);
-  t.throws(function () {
-    cli({argv: ['node', 'bin.js', 1], stdout: t.context.stdout});
-  }, 'Cannot generate password of length 1');
+	t.plan(1);
+	t.throws(function () {
+		cli({argv: ['node', 'bin.js', 1], stdout: t.context.stdout});
+	}, 'Cannot generate password of length 1');
 });
