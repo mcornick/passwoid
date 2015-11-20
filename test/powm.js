@@ -18,36 +18,29 @@ var powm = require('../lib/powm');
 var test = require('ava');
 var uniq = require('lodash.uniq');
 
-test('creates a password of default length', function (t) {
+test('default length', function (t) {
   t.plan(1);
   t.is(powm().length, 16);
 });
 
-test('creates a password of specific length', function (t) {
+test('specific length', function (t) {
   t.plan(1);
   t.is(powm(8).length, 8);
 });
 
-test('creates a password longer than the pool of characters', function (t) {
+test('length longer than pool length', function (t) {
   t.plan(1);
   t.is(powm(64).length, 64);
 });
 
-test('throws an error when length is too short', function (t) {
+test('length too short', function (t) {
   t.plan(1);
   t.throws(function () {
     powm(1);
   }, 'Cannot generate password of length 1');
 });
 
-test('does not throw an error when length is longer than pool', function (t) {
-  t.plan(1);
-  t.doesNotThrow(function () {
-    powm(64);
-  });
-});
-
-test('creates a password with all three character classes', function (t) {
+test('all three character classes', function (t) {
   t.plan(3);
   var password = powm();
   t.regexTest(/[A-Z]/, password);
@@ -55,12 +48,12 @@ test('creates a password with all three character classes', function (t) {
   t.regexTest(/\d/, password);
 });
 
-test('does not repeat characters if length is <= that of pool', function (t) {
+test('does not repeat characters', function (t) {
   t.plan(1);
   t.is(uniq(powm(16).split('')).length, 16);
 });
 
-test('repeats characters if length is > that of pool', function (t) {
+test('repeats characters', function (t) {
   t.plan(1);
   t.not(uniq(powm(64).split('')).length, 64);
 });
