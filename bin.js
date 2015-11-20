@@ -18,7 +18,7 @@
 
 var cli = require('./lib/cli');
 
-cli.default({
+cli({
 	stdout: process.stdout,
 	argv: process.argv
 });

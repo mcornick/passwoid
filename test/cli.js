@@ -12,50 +12,37 @@
 // OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
 // PERFORMANCE OF THIS SOFTWARE.
 
-/* eslint-env mocha */
-
-import chai from 'chai';
 import cli from '../lib/cli';
 import stream from 'mock-utf8-stream';
+import test from 'ava';
 
-const testCli = options => {
+test('default length', t => {
+	t.plan(1);
 	const stdout = new stream.MockWritableStream();
 	stdout.startCapture();
-	cli({
-		argv: options.argv,
-		stdout: stdout
-	});
-	chai.expect(stdout.capturedData.trim().length).to.equal(options.length);
-};
+	cli({argv: ['node', 'bin.js'], stdout: stdout});
+	t.is(stdout.capturedData.trim().length, 16);
+});
 
-describe('cli', () => {
-	it('given no length, creates a password of default length', () => {
-		testCli({
-			argv: ['node', 'bin.js'],
-			length: 16
-		});
-	});
+test('specific length', t => {
+	t.plan(1);
+	const stdout = new stream.MockWritableStream();
+	stdout.startCapture();
+	cli({argv: ['node', 'bin.js', 8], stdout: stdout});
+	t.is(stdout.capturedData.trim().length, 8);
+});
 
-	it('given a specific length, creates a password of that length', () => {
-		testCli({
-			argv: ['node', 'bin.js', 8],
-			length: 8
-		});
-	});
+test('bogus length', t => {
+	t.plan(1);
+	const stdout = new stream.MockWritableStream();
+	stdout.startCapture();
+	cli({argv: ['node', 'bin.js', 'pants'], stdout: stdout});
+	t.is(stdout.capturedData.trim().length, 16);
+});
 
-	it('given a bogus length, creates a password of default length', () => {
-		testCli({
-			argv: ['node', 'bin.js', 'pants'],
-			length: 16
-		});
-	});
-
-	it('given a too-short length, throws an error', () => {
-		chai.expect(() => {
-			cli({
-				argv: ['node', 'bin.js', 1],
-				stdout: new stream.MockWritableStream()
-			});
-		}).to.throw('Cannot generate password of length 1');
-	});
+test('length too short', t => {
+	t.plan(1);
+	t.throws(function () {
+		cli({argv: ['node', 'bin.js', 1], stdout: process.stdout});
+	}, 'Cannot generate password of length 1');
 });
