@@ -3,16 +3,18 @@
 var ava = require('gulp-ava');
 var babel = require('gulp-babel');
 var del = require('del');
+var eslint = require('gulp-eslint');
 var excludeGitignore = require('gulp-exclude-gitignore');
 var gulp = require('gulp');
 var nsp = require('gulp-nsp');
 var path = require('path');
-var xo = require('gulp-xo');
 
 gulp.task('static', function () {
 	return gulp.src('**/*.js')
 		.pipe(excludeGitignore())
-		.pipe(xo({quiet: true}));
+		.pipe(eslint())
+		.pipe(eslint.format())
+		.pipe(eslint.failAfterError());
 });
 
 gulp.task('nsp', function (cb) {
