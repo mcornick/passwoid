@@ -2,7 +2,9 @@ PreCommit:
   EsLint:
     enabled: true
     exclude:
+      - 'coverage/**/*js'
       - 'lib/**/*js'
+      - 'node_modules/**/*js'
 
 PostCheckout:
  ALL:
