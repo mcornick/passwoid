@@ -13,7 +13,7 @@
   "author": {
     "name": "Mark Cornick",
     "email": "mark@markcornick.com",
-    "url": "http://www.markcornick.com/"
+    "url": "https://www.markcornick.com/"
   },
   "license": "ISC",
   "main": "lib/powm.js",
