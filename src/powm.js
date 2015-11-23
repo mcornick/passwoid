@@ -41,10 +41,7 @@ function generatePassword(pool, length) {
 	return results.join('');
 }
 
-export default function (length) {
-	if (typeof length === 'undefined') {
-		length = 16;
-	}
+export default function (length = 16) {
 	if (length < 3) {
 		throw new Error('Cannot generate password of length ' + length);
 	} else {
