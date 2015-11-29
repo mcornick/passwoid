@@ -17,41 +17,41 @@ import test from 'ava';
 import uniq from 'lodash.uniq';
 
 test('default length', t => {
-	t.plan(1);
 	t.is(powm().length, 16);
+	t.end();
 });
 
 test('specific length', t => {
-	t.plan(1);
 	t.is(powm(8).length, 8);
+	t.end();
 });
 
 test('length longer than pool length', t => {
-	t.plan(1);
 	t.is(powm(64).length, 64);
+	t.end();
 });
 
 test('length too short', t => {
-	t.plan(1);
 	t.throws(() => {
 		powm(1);
 	}, 'Cannot generate password of length 1');
+	t.end();
 });
 
 test('all three character classes', t => {
-	t.plan(3);
 	const password = powm();
 	t.regexTest(/[A-Z]/, password);
 	t.regexTest(/[a-z]/, password);
 	t.regexTest(/\d/, password);
+	t.end();
 });
 
 test('does not repeat characters', t => {
-	t.plan(1);
 	t.is(uniq(powm(16).split('')).length, 16);
+	t.end();
 });
 
 test('repeats characters', t => {
-	t.plan(1);
 	t.not(uniq(powm(64).split('')).length, 64);
+	t.end();
 });
