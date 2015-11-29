@@ -3,7 +3,6 @@ PreCommit:
     enabled: true
     exclude:
       - 'coverage/**/*js'
-      - 'lib/**/*js'
       - 'node_modules/**/*js'
 
 PostCheckout:
@@ -11,26 +10,18 @@ PostCheckout:
    quiet: true
  IndexTags:
    enabled: true
- NpmInstall:
-   enabled: true
 PostCommit:
  ALL:
    quiet: true
  IndexTags:
-   enabled: true
- NpmInstall:
    enabled: true
 PostMerge:
  ALL:
    quiet: true
  IndexTags:
    enabled: true
- NpmInstall:
-   enabled: true
 PostRewrite:
  ALL:
    quiet: true
  IndexTags:
-   enabled: true
- NpmInstall:
    enabled: true
