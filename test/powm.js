@@ -12,46 +12,48 @@
 // OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
 // PERFORMANCE OF THIS SOFTWARE.
 
-import powm from '../lib/powm';
-import test from 'ava';
-import uniq from 'lodash.uniq';
+'use strict';
 
-test('default length', t => {
+var powm = require('../lib/powm');
+var test = require('ava');
+var uniq = require('lodash.uniq');
+
+test('default length', function (t) {
 	t.is(powm().length, 16);
 	t.end();
 });
 
-test('specific length', t => {
+test('specific length', function (t) {
 	t.is(powm(8).length, 8);
 	t.end();
 });
 
-test('length longer than pool length', t => {
+test('length longer than pool length', function (t) {
 	t.is(powm(64).length, 64);
 	t.end();
 });
 
-test('length too short', t => {
-	t.throws(() => {
+test('length too short', function (t) {
+	t.throws(function () {
 		powm(1);
 	}, 'Cannot generate password of length 1');
 	t.end();
 });
 
-test('all three character classes', t => {
-	const password = powm();
+test('all three character classes', function (t) {
+	var password = powm();
 	t.regexTest(/[A-Z]/, password);
 	t.regexTest(/[a-z]/, password);
 	t.regexTest(/\d/, password);
 	t.end();
 });
 
-test('does not repeat characters', t => {
+test('does not repeat characters', function (t) {
 	t.is(uniq(powm(16).split('')).length, 16);
 	t.end();
 });
 
-test('repeats characters', t => {
+test('repeats characters', function (t) {
 	t.not(uniq(powm(64).split('')).length, 64);
 	t.end();
 });

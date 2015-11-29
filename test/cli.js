@@ -12,37 +12,41 @@
 // OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
 // PERFORMANCE OF THIS SOFTWARE.
 
-import cli from '../lib/cli';
-import stream from 'mock-utf8-stream';
-import test from 'ava';
+'use strict';
 
-test('default length', t => {
-	const stdout = new stream.MockWritableStream();
+var cli = require('../lib/cli');
+var test = require('ava');
+var stream = require('mock-utf8-stream');
+
+test('default length', function (t) {
+	var stdout = new stream.MockWritableStream();
 	stdout.startCapture();
 	cli({argv: ['node', 'bin.js'], stdout: stdout});
 	t.is(stdout.capturedData.trim().length, 16);
 	t.end();
 });
 
-test('specific length', t => {
-	const stdout = new stream.MockWritableStream();
+test('specific length', function (t) {
+	var stdout = new stream.MockWritableStream();
 	stdout.startCapture();
 	cli({argv: ['node', 'bin.js', 8], stdout: stdout});
 	t.is(stdout.capturedData.trim().length, 8);
 	t.end();
 });
 
-test('bogus length', t => {
-	const stdout = new stream.MockWritableStream();
+test('bogus length', function (t) {
+	var stdout = new stream.MockWritableStream();
 	stdout.startCapture();
 	cli({argv: ['node', 'bin.js', 'pants'], stdout: stdout});
 	t.is(stdout.capturedData.trim().length, 16);
 	t.end();
 });
 
-test('length too short', t => {
+test('length too short', function (t) {
+	var stdout = new stream.MockWritableStream();
+	stdout.startCapture();
 	t.throws(function () {
-		cli({argv: ['node', 'bin.js', 1], stdout: process.stdout});
+		cli({argv: ['node', 'bin.js', 1], stdout: stdout});
 	}, 'Cannot generate password of length 1');
 	t.end();
 });
