@@ -23,7 +23,6 @@ test('default length', function (t) {
 	stdout.startCapture();
 	cli({argv: ['node', 'bin.js'], stdout: stdout});
 	t.is(stdout.capturedData.trim().length, 16);
-	t.end();
 });
 
 test('specific length', function (t) {
@@ -31,7 +30,6 @@ test('specific length', function (t) {
 	stdout.startCapture();
 	cli({argv: ['node', 'bin.js', 8], stdout: stdout});
 	t.is(stdout.capturedData.trim().length, 8);
-	t.end();
 });
 
 test('bogus length', function (t) {
@@ -39,7 +37,6 @@ test('bogus length', function (t) {
 	stdout.startCapture();
 	cli({argv: ['node', 'bin.js', 'pants'], stdout: stdout});
 	t.is(stdout.capturedData.trim().length, 16);
-	t.end();
 });
 
 test('length too short', function (t) {
@@ -48,5 +45,4 @@ test('length too short', function (t) {
 	t.throws(function () {
 		cli({argv: ['node', 'bin.js', 1], stdout: stdout});
 	}, 'Cannot generate password of length 1');
-	t.end();
 });

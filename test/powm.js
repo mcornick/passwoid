@@ -20,24 +20,20 @@ var uniq = require('lodash.uniq');
 
 test('default length', function (t) {
 	t.is(powm().length, 16);
-	t.end();
 });
 
 test('specific length', function (t) {
 	t.is(powm(8).length, 8);
-	t.end();
 });
 
 test('length longer than pool length', function (t) {
 	t.is(powm(64).length, 64);
-	t.end();
 });
 
 test('length too short', function (t) {
 	t.throws(function () {
 		powm(1);
 	}, 'Cannot generate password of length 1');
-	t.end();
 });
 
 test('all three character classes', function (t) {
@@ -45,15 +41,12 @@ test('all three character classes', function (t) {
 	t.regexTest(/[A-Z]/, password);
 	t.regexTest(/[a-z]/, password);
 	t.regexTest(/\d/, password);
-	t.end();
 });
 
 test('does not repeat characters', function (t) {
 	t.is(uniq(powm(16).split('')).length, 16);
-	t.end();
 });
 
 test('repeats characters', function (t) {
 	t.not(uniq(powm(64).split('')).length, 64);
-	t.end();
 });
