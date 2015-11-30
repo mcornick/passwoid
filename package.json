@@ -1,7 +1,7 @@
 {
   "name": "powm",
   "version": "2.0.7",
-  "description": "A reasonably secure password maker",
+  "description": "A reasonably secure password generator",
   "keywords": [
     "random",
     "password"
@@ -17,9 +17,6 @@
   },
   "license": "ISC",
   "main": "lib/powm.js",
-  "bin": {
-    "powm": "bin.js"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/markcornick/powm.git"
@@ -33,7 +30,6 @@
     "ava": "^0.7.0",
     "coveralls": "^2.11.4",
     "lodash.uniq": "^3.2.2",
-    "mock-utf8-stream": "^0.1.1",
     "nyc": "^4.0.1",
     "xo": "^0.11.1"
   }
