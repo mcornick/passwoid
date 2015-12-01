@@ -50,3 +50,9 @@ test('does not repeat characters', function (t) {
 test('repeats characters', function (t) {
 	t.not(uniq(powm(64).split('')).length, 64);
 });
+
+test('passwords are not identical', function (t) {
+	var password1 = powm();
+	var password2 = powm();
+	t.not(password1, password2);
+});
