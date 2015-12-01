@@ -15,7 +15,7 @@
     "email": "mark@markcornick.com",
     "url": "https://www.markcornick.com/"
   },
-  "license": "ISC",
+  "license": "LGPL-3.0+",
   "main": "lib/powm.js",
   "repository": {
     "type": "git",
