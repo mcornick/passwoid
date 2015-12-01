@@ -54,5 +54,6 @@ to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
 ## License
 
-powm is available as open source under the terms of the [ISC
-License](http://opensource.org/licenses/ISC).
+powm is available as open source under the terms of the [GNU Lesser General
+Public License](http://www.gnu.org/licenses/lgpl-3.0-standalone.html), version
+3.0 or later.
