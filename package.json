@@ -1,6 +1,6 @@
 {
   "name": "powm",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "A reasonably secure password generator",
   "keywords": [
     "random",
