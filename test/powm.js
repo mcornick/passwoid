@@ -12,48 +12,62 @@
 //
 // You should have received a copy of the GNU Lesser General Public License
 // along with this program.  If not, see <http://www.gnu.org/licenses/>.
+/* eslint-env mocha */
 
 'use strict'
 
 var powm = require('../lib/powm')
-var test = require('ava')
+var chai = require('chai')
 var uniq = require('lodash.uniq')
 
-test('default length', function (t) {
-  t.is(powm().length, 16)
-})
+describe('powm', function () {
+  it('default length', function () {
+    chai.expect(
+      powm().length
+    ).to.equal(16)
+  })
 
-test('specific length', function (t) {
-  t.is(powm(8).length, 8)
-})
+  it('specific length', function () {
+    chai.expect(
+      powm(8).length
+    ).to.equal(8)
+  })
 
-test('length longer than pool length', function (t) {
-  t.is(powm(64).length, 64)
-})
+  it('length longer than pool length', function () {
+    chai.expect(
+      powm(64).length
+    ).to.equal(64)
+  })
 
-test('length too short', function (t) {
-  t.throws(function () {
-    powm(1)
-  }, 'Cannot generate password of length 1')
-})
+  it('length too short', function () {
+    chai.expect(function () {
+      powm(1)
+    }).to.throw('Cannot generate password of length 1')
+  })
 
-test('all three character classes', function (t) {
-  var password = powm()
-  t.regexTest(/[A-Z]/, password)
-  t.regexTest(/[a-z]/, password)
-  t.regexTest(/\d/, password)
-})
+  it('all three character classes', function () {
+    chai.expect(
+      powm()
+    ).to.match(/[A-Z]/).and
+      .to.match(/[a-z]/).and
+      .to.match(/\d/)
+  })
 
-test('does not repeat characters', function (t) {
-  t.is(uniq(powm(16).split('')).length, 16)
-})
+  it('does not repeat characters', function () {
+    chai.expect(
+      uniq(powm(16).split('')).length
+    ).to.equal(16)
+  })
 
-test('repeats characters', function (t) {
-  t.not(uniq(powm(64).split('')).length, 64)
-})
+  it('repeats characters', function () {
+    chai.expect(
+      uniq(powm(64).split('')).length
+    ).not.to.equal(64)
+  })
 
-test('passwords are not identical', function (t) {
-  var password1 = powm()
-  var password2 = powm()
-  t.not(password1, password2)
+  it('passwords are not identical', function () {
+    var password1 = powm()
+    var password2 = powm()
+    chai.expect(password1).not.to.equal(password2)
+  })
 })
