@@ -51,6 +51,10 @@ gulp.task('test', ['pre-test'], function (cb) {
     });
 });
 
+gulp.task('watch', function () {
+  gulp.watch('**/*.js', ['test']);
+});
+
 gulp.task('coveralls', ['test'], function () {
   if (!process.env.CI) {
     return;
