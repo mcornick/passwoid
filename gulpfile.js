@@ -2,7 +2,7 @@
 
 var alex = require('gulp-alex')
 var coveralls = require('gulp-coveralls')
-var standard = require('gulp-standard')
+var eslint = require('gulp-eslint')
 var excludeGitignore = require('gulp-exclude-gitignore')
 var gulp = require('gulp')
 var istanbul = require('gulp-istanbul')
@@ -14,10 +14,9 @@ var plumber = require('gulp-plumber')
 gulp.task('static', function () {
   return gulp.src('**/*.js')
     .pipe(excludeGitignore())
-    .pipe(standard())
-    .pipe(standard.reporter('default', {
-      breakOnError: true
-    }))
+    .pipe(eslint())
+    .pipe(eslint.format())
+    .pipe(eslint.failAfterError())
 })
 
 gulp.task('alex', function () {
