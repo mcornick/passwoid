@@ -27,6 +27,7 @@
   "homepage": "http://markcornick.github.io/powm/",
   "devDependencies": {
     "chai": "^3.4.1",
+    "eslint-config-xo-space": "^0.8.0",
     "gulp": "^3.9.0",
     "gulp-alex": "^2.0.0",
     "gulp-coveralls": "^0.1.4",
@@ -37,5 +38,8 @@
     "gulp-nsp": "^2.2.1",
     "gulp-plumber": "^1.0.1",
     "lodash.uniq": "^3.2.2"
+  },
+  "eslintConfig": {
+    "extends": "xo-space"
   }
 }
