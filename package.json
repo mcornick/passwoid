@@ -7,8 +7,8 @@
     "password"
   ],
   "scripts": {
-    "prepublish": "gulp prepublish --no-color",
-    "test": "gulp --no-color"
+    "prepublish": "gulp prepublish",
+    "test": "gulp"
   },
   "author": {
     "name": "Mark Cornick",
