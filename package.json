@@ -37,7 +37,7 @@
     "gulp-mocha": "^2.2.0",
     "gulp-nsp": "^2.2.1",
     "gulp-plumber": "^1.0.1",
-    "lodash.uniq": "^3.2.2"
+    "lodash.uniq": "^4.0.1"
   },
   "eslintConfig": {
     "extends": "xo-space"
