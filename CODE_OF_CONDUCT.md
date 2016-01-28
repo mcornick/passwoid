@@ -46,9 +46,10 @@ is deemed necessary and appropriate to the circumstances. Maintainers are
 obligated to maintain confidentiality with regard to the reporter of an
 incident.
 
-This Code of Conduct is adapted from the [Contributor Covenant][homepage],
+This Code of Conduct is adapted from the [Contributor Covenant][1],
 version 1.3.0, available at
-[http://contributor-covenant.org/version/1/3/0/][version]
+[http://contributor-covenant.org/version/1/3/0/][2]
 
-[homepage]: http://contributor-covenant.org
-[version]: http://contributor-covenant.org/version/1/3/0/
+[1]: http://contributor-covenant.org
+
+[2]: http://contributor-covenant.org/version/1/3/0/
