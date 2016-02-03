@@ -35,5 +35,8 @@
   },
   "xo": {
     "space": true
+  },
+  "alex": {
+    "allow": ["sexual"]
   }
 }
