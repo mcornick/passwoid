@@ -53,8 +53,8 @@ the [Contributor Covenant][8] code of conduct.
 
 ## License
 
-powm is available as open source under the terms of the [GNU Lesser General
-Public License][9], version 3.0 or later.
+powm is available as open source under the terms of the [Apache License][9]
+version 2.0.
 
 [1]: https://travis-ci.org/markcornick/powm.svg
 
@@ -72,4 +72,4 @@ Public License][9], version 3.0 or later.
 
 [8]: http://contributor-covenant.org
 
-[9]: http://www.gnu.org/licenses/lgpl-3.0-standalone.html
+[9]: http://www.apache.org/licenses/LICENSE-2.0

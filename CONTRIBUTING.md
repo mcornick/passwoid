@@ -22,10 +22,10 @@ calculate coverage; make sure it passes, and that coverage does not drop below
 100%. Please limit your changes to the specific thing you're fixing and isolate
 your changes in a topic branch that I can merge without pulling in other stuff.
 
-powm uses the LGPL-3.0+ license. If you submit a pull request, I'll assume you
-are OK with any code you add being placed under that same LGPL-3.0+ license. If
+powm uses the Apache-2.0 license. If you submit a pull request, I'll assume you
+are OK with any code you add being placed under that same Apache-2.0 license. If
 this is not the case for any reason, please let me know why you can't tolerate
-the LGPL-3.0+ license. I am 99.99% likely to reject your change in that case,
+the Apache-2.0 license. I am 99.99% likely to reject your change in that case,
 but I'll let you have your say.
 
 This project is intended to be a safe, welcoming space for collaboration, and
