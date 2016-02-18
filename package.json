@@ -7,7 +7,7 @@
     "password"
   ],
   "scripts": {
-    "test": "xo && nyc ava",
+    "test": "xo && nyc ava && alex",
     "coverage": "nyc report --reporter=text-lcov | coveralls"
   },
   "author": {
@@ -26,6 +26,7 @@
   },
   "homepage": "http://markcornick.github.io/powm/",
   "devDependencies": {
+    "alex": "^2.0.0",
     "ava": "^0.12.0",
     "coveralls": "^2.11.4",
     "lodash.uniq": "^4.0.1",
