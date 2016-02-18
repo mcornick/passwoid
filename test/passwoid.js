@@ -14,45 +14,45 @@
 
 'use strict';
 
-var powm = require('../lib/powm');
+var passwoid = require('../lib/passwoid');
 var test = require('ava');
 var uniq = require('lodash.uniq');
 
 test('default length', function (t) {
-  t.is(powm().length, 16);
+  t.is(passwoid().length, 16);
 });
 
 test('specific length', function (t) {
-  t.is(powm(8).length, 8);
+  t.is(passwoid(8).length, 8);
 });
 
 test('length longer than pool length', function (t) {
-  t.is(powm(64).length, 64);
+  t.is(passwoid(64).length, 64);
 });
 
 test('length too short', function (t) {
   t.throws(function () {
-    powm(1);
+    passwoid(1);
   }, 'Cannot generate password of length 1');
 });
 
 test('all three character classes', function (t) {
-  var password = powm();
+  var password = passwoid();
   t.regex(password, /[A-Z]/);
   t.regex(password, /[a-z]/);
   t.regex(password, /\d/);
 });
 
 test('does not repeat characters', function (t) {
-  t.is(uniq(powm(16).split('')).length, 16);
+  t.is(uniq(passwoid(16).split('')).length, 16);
 });
 
 test('repeats characters', function (t) {
-  t.not(uniq(powm(64).split('')).length, 64);
+  t.not(uniq(passwoid(64).split('')).length, 64);
 });
 
 test('passwords are not identical', function (t) {
-  var password1 = powm();
-  var password2 = powm();
+  var password1 = passwoid();
+  var password2 = passwoid();
   t.not(password1, password2);
 });

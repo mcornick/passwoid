@@ -1,5 +1,5 @@
 {
-  "name": "powm",
+  "name": "passwoid",
   "version": "3.1.0",
   "description": "A reasonably secure password generator",
   "keywords": [
@@ -16,18 +16,18 @@
     "url": "https://www.markcornick.com/"
   },
   "license": "Apache-2.0",
-  "main": "lib/powm.js",
+  "main": "lib/passwoid.js",
   "bin": {
-    "powm": "bin.js"
+    "passwoid": "bin.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/markcornick/powm.git"
+    "url": "git+https://github.com/markcornick/passwoid.git"
   },
   "bugs": {
-    "url": "https://github.com/markcornick/powm/issues"
+    "url": "https://github.com/markcornick/passwoid/issues"
   },
-  "homepage": "https://markcornick.github.io/powm/",
+  "homepage": "https://markcornick.github.io/passwoid/",
   "devDependencies": {
     "alex": "^2.0.0",
     "ava": "^0.12.0",
