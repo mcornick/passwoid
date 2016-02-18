@@ -16,24 +16,26 @@ you're not satisfied with my response to your problem with my free (as
 in beer and in speech) software, I will give you triple your $0.00 back.
 
 When filing a pull request, please explain what you're changing and why. Please
-use the existing code style and add or update tests as needed. `npm test` will
-run tests, check style, and calculate coverage; make sure it passes, and that
-coverage does not drop below 100%. Please limit your changes to the specific
-thing you're fixing and isolate your changes in a topic branch that I can merge
-without pulling in other stuff.
+use [XO style][2] _with spaces instead of tabs_ (i.e., the `xo --space` mode)
+and add or update tests as needed. `npm test` will run tests, check style, and
+calculate coverage; make sure it passes, and that coverage does not drop below
+100%. Please limit your changes to the specific thing you're fixing and isolate
+your changes in a topic branch that I can merge without pulling in other stuff.
 
-This project uses the Apache-2.0 license. If you submit a pull request, I'll
-assume you are OK with any code you add being placed under that same Apache-2.0
-license. If this is not the case for any reason, please let me know why you
-can't tolerate the Apache-2.0 license. I am 99.99% likely to reject your change
-in that case, but I'll let you have your say.
+powm uses the Apache-2.0 license. If you submit a pull request, I'll assume you
+are OK with any code you add being placed under that same Apache-2.0 license. If
+this is not the case for any reason, please let me know why you can't tolerate
+the Apache-2.0 license. I am 99.99% likely to reject your change in that case,
+but I'll let you have your say.
 
 This project is intended to be a safe, welcoming space for collaboration, and
-contributors are expected to adhere to the [Contributor Covenant][2] code of
+contributors are expected to adhere to the [Contributor Covenant][3] code of
 conduct.
 
 Thanks for contributing!
 
 [1]: https://viget.com/extend/tips-for-writing-better-bug-reports
 
-[2]: http://contributor-covenant.org
+[2]: https://github.com/sindresorhus/xo
+
+[3]: http://contributor-covenant.org
