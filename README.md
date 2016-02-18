@@ -65,7 +65,7 @@ version 2.0.
 
 [1]: https://travis-ci.org/markcornick/passwoid.svg
 
-[2]: https://coveralls.io/repos/markcornick/passwoid/badge.svg?branch=master&service=github
+[2]: https://coveralls.io/repos/github/markcornick/passwoid/badge.svg?branch=master
 
 [3]: https://travis-ci.org/markcornick/passwoid
 
