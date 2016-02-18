@@ -24,7 +24,7 @@
   "bugs": {
     "url": "https://github.com/markcornick/powm/issues"
   },
-  "homepage": "http://markcornick.github.io/powm/",
+  "homepage": "https://markcornick.github.io/powm/",
   "devDependencies": {
     "alex": "^2.0.0",
     "ava": "^0.12.0",
