@@ -1,6 +1,6 @@
 language: node_js
 node_js:
+- v5
+- v4
 - '0.12'
-- '4.2'
-- '5.0'
-after_success: npm run coverage
+- '0.10'
