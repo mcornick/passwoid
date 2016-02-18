@@ -18,9 +18,9 @@ in beer and in speech) software, I will give you triple your $0.00 back.
 When filing a pull request, please explain what you're changing and why. Please
 use [XO style][2] _with spaces instead of tabs_ (i.e., the `xo --space` mode)
 and add or update tests as needed. `npm test` will run tests, check style, and
-calculate coverage; make sure it passes. Please limit your changes to the
-specific thing you're fixing and isolate your changes in a topic branch that I
-can merge without pulling in other stuff.
+calculate coverage; make sure it passes, and that coverage does not drop below
+100%. Please limit your changes to the specific thing you're fixing and isolate
+your changes in a topic branch that I can merge without pulling in other stuff.
 
 powm uses the LGPL-3.0+ license. If you submit a pull request, I'll assume you
 are OK with any code you add being placed under that same LGPL-3.0+ license. If
