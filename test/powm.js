@@ -39,9 +39,9 @@ test('length too short', function (t) {
 
 test('all three character classes', function (t) {
   var password = powm();
-  t.regexTest(/[A-Z]/, password);
-  t.regexTest(/[a-z]/, password);
-  t.regexTest(/\d/, password);
+  t.regex(password, /[A-Z]/);
+  t.regex(password, /[a-z]/);
+  t.regex(password, /\d/);
 });
 
 test('does not repeat characters', function (t) {
