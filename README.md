@@ -44,9 +44,9 @@ h6ECtbDZPnRddHV7
 $ passwoid 8
 XdWod8f8
 $ passwoid 1
-/usr/local/lib/node_modules/passwoid/lib/passwoid.js:45
+/usr/local/lib/node_modules/passwoid/lib/passwoid.js:51
     throw new Error('Cannot generate password of length ' + length);
-          ^
+    ^
 Error: Cannot generate password of length 1
 [...]
 ```
