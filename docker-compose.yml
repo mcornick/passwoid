@@ -1,5 +1,0 @@
-node:
-  build: .
-  command: npm install
-  volumes:
-    - .:/tmp/code
