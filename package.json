@@ -29,7 +29,7 @@
   "homepage": "https://markcornick.github.io/passwoid/",
   "devDependencies": {
     "alex": "^2.0.0",
-    "ava": "^0.12.0",
+    "ava": "^0.13.0",
     "coveralls": "^2.11.4",
     "lodash.uniq": "^4.0.1",
     "mock-utf8-stream": "^0.1.1",
