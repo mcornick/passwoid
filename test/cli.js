@@ -14,9 +14,9 @@
 
 'use strict';
 
-var cli = require('../lib/cli');
 var test = require('ava');
 var stream = require('mock-utf8-stream');
+var cli = require('../lib/cli');
 
 test('default length', function (t) {
   var stdout = new stream.MockWritableStream();
