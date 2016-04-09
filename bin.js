@@ -14,11 +14,11 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-'use strict';
+'use strict'
 
-var cli = require('./lib/cli');
+var cli = require('./lib/cli')
 
 cli({
   stdout: process.stdout,
   argv: process.argv
-});
+})

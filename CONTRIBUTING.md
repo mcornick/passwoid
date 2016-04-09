@@ -16,11 +16,11 @@ you're not satisfied with my response to your problem with my free (as
 in beer and in speech) software, I will give you triple your $0.00 back.
 
 When filing a pull request, please explain what you're changing and why. Please
-use [XO style][2] _with spaces instead of tabs_ (i.e., the `xo --space` mode)
-and add or update tests as needed. `npm test` will run tests, check style, and
-calculate coverage; make sure it passes, and that coverage does not drop below
-100%. Please limit your changes to the specific thing you're fixing and isolate
-your changes in a topic branch that I can merge without pulling in other stuff.
+use [Standard style][2] and add or update tests as needed. `npm test` will run
+tests, check style, and calculate coverage; make sure it passes, and that
+coverage does not drop below 100%. Please limit your changes to the specific
+thing you're fixing and isolate your changes in a topic branch that I can merge
+without pulling in other stuff.
 
 This project uses the Apache-2.0 license. If you submit a pull request, I'll
 assume you are OK with any code you add being placed under that same Apache-2.0
@@ -34,6 +34,6 @@ Thanks for contributing!
 
 [1]: https://viget.com/extend/tips-for-writing-better-bug-reports
 
-[2]: https://github.com/sindresorhus/xo
+[2]: https://standardjs.com
 
 [3]: http://contributor-covenant.org
