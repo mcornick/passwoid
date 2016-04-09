@@ -14,9 +14,9 @@
 
 'use strict';
 
-var passwoid = require('../lib/passwoid');
 var test = require('ava');
 var uniq = require('lodash.uniq');
+var passwoid = require('../lib/passwoid');
 
 test('default length', function (t) {
   t.is(passwoid().length, 16);
