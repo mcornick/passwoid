@@ -54,7 +54,7 @@ Error: Cannot generate password of length 1
 ## Contributing
 
 Bug reports and pull requests are welcome on GitHub at
-[https://github.com/markcornick/passwoid][5]. This project is intended to be a
+[https://github.com/passwoid/passwoid][5]. This project is intended to be a
 safe, welcoming space for collaboration, and contributors are expected to adhere
 to the [Contributor Covenant][6] code of conduct.
 
@@ -63,15 +63,15 @@ to the [Contributor Covenant][6] code of conduct.
 passwoid is available as open source under the terms of the [Apache License][7]
 version 2.0.
 
-[1]: https://travis-ci.org/markcornick/passwoid.svg
+[1]: https://travis-ci.org/passwoid/passwoid.svg
 
-[2]: https://coveralls.io/repos/github/markcornick/passwoid/badge.svg?branch=master
+[2]: https://coveralls.io/repos/github/passwoid/passwoid/badge.svg?branch=master
 
-[3]: https://travis-ci.org/markcornick/passwoid
+[3]: https://travis-ci.org/passwoid/passwoid
 
-[4]: https://coveralls.io/github/markcornick/passwoid?branch=master
+[4]: https://coveralls.io/github/passwoid/passwoid?branch=master
 
-[5]: https://github.com/markcornick/passwoid
+[5]: https://github.com/passwoid/passwoid
 
 [6]: http://contributor-covenant.org
 
