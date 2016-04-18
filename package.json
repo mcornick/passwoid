@@ -7,7 +7,7 @@
     "password"
   ],
   "scripts": {
-    "test": "standard && nyc ava && alex"
+    "test": "xo && nyc ava && alex"
   },
   "author": {
     "name": "Mark Cornick",
@@ -34,6 +34,9 @@
     "lodash.uniq": "^4.0.1",
     "mock-utf8-stream": "^0.1.1",
     "nyc": "^6.0.0",
-    "standard": "^6.0.8"
+    "xo": "^0.14.0"
+  },
+  "xo": {
+    "space": true
   }
 }
