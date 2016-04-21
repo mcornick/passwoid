@@ -22,6 +22,9 @@ calculate coverage; make sure it passes, and that coverage does not drop below
 100%. Please limit your changes to the specific thing you're fixing and isolate
 your changes in a topic branch that I can merge without pulling in other stuff.
 
+This project is now using [Conventional Changelog][4] style. Please follow
+this convention. [Commitizen][5] makes this easier.
+
 This project uses the Apache-2.0 license. If you submit a pull request, I'll
 assume you are OK with any code you add being placed under that same Apache-2.0
 license.
@@ -37,3 +40,7 @@ Thanks for contributing!
 [2]: https://github.com/sindresorhus/xo
 
 [3]: http://contributor-covenant.org
+
+[4]: https://github.com/conventional-changelog/conventional-changelog-angular/blob/master/convention.md
+
+[5]: https://commitizen.github.io/cz-cli/

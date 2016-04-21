@@ -31,6 +31,7 @@
     "alex": "^2.0.0",
     "ava": "^0.14.0",
     "coveralls": "^2.11.4",
+    "cz-conventional-changelog": "^1.1.5",
     "lodash.uniq": "^4.0.1",
     "mock-utf8-stream": "^0.1.1",
     "nyc": "^6.0.0",
@@ -38,5 +39,10 @@
   },
   "xo": {
     "space": true
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
   }
 }

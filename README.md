@@ -1,4 +1,4 @@
-# passwoid [![Build Status][1]][3] [![Coverage Status][2]][4]
+# passwoid [![Build Status][1]][3] [![Coverage Status][2]][4] [![Commitizen friendly][8]][9]
 
 > A reasonably secure password generator
 
@@ -76,3 +76,8 @@ version 2.0.
 [6]: http://contributor-covenant.org
 
 [7]: http://www.apache.org/licenses/LICENSE-2.0
+
+[8]: https://img.shields.io/badge/commitizen-friendly-brightgreen.svg
+
+[9]: http://commitizen.github.io/cz-cli/
+
