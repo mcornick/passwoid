@@ -1,4 +1,7 @@
-# passwoid [![Build Status][1]][3] [![Coverage Status][2]][4] [![Commitizen friendly][8]][9]
+# passwoid
+
+[![Build Status][10]][11] [![Build Status][1]][3]
+[![Coverage Status][2]][4] [![Commitizen friendly][8]][9]
 
 > A reasonably secure password generator
 
@@ -79,5 +82,8 @@ version 2.0.
 
 [8]: https://img.shields.io/badge/commitizen-friendly-brightgreen.svg
 
-[9]: http://commitizen.github.io/cz-cli/
+[9]: https://commitizen.github.io/cz-cli/
 
+[10]: https://img.shields.io/npm/v/passwoid.svg
+
+[11]: https://www.npmjs.com/package/passwoid
