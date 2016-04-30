@@ -37,7 +37,7 @@
     "mock-utf8-stream": "^0.1.1",
     "nyc": "^6.0.0",
     "standard-version": "^2.1.2",
-    "xo": "^0.14.0"
+    "xo": "^0.15.0"
   },
   "xo": {
     "space": true
