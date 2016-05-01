@@ -11,48 +11,62 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
+/* eslint-env mocha */
 
 'use strict';
 
-var test = require('ava');
+var chai = require('chai');
 var uniq = require('lodash.uniq');
 var passwoid = require('../lib/passwoid');
 
-test('default length', function (t) {
-  t.is(passwoid().length, 16);
-});
+describe('passwoid', function () {
+  it('default length', function () {
+    chai.expect(
+      passwoid().length
+    ).to.equal(16);
+  });
 
-test('specific length', function (t) {
-  t.is(passwoid(8).length, 8);
-});
+  it('specific length', function () {
+    chai.expect(
+      passwoid(8).length
+    ).to.equal(8);
+  });
 
-test('length longer than pool length', function (t) {
-  t.is(passwoid(64).length, 64);
-});
+  it('length longer than pool length', function () {
+    chai.expect(
+      passwoid(64).length
+    ).to.equal(64);
+  });
 
-test('length too short', function (t) {
-  t.throws(function () {
-    passwoid(1);
-  }, 'Cannot generate password of length 1');
-});
+  it('length too short', function () {
+    chai.expect(function () {
+      passwoid(1);
+    }).to.throw('Cannot generate password of length 1');
+  });
 
-test('all three character classes', function (t) {
-  var password = passwoid();
-  t.regex(password, /[A-Z]/);
-  t.regex(password, /[a-z]/);
-  t.regex(password, /\d/);
-});
+  it('all three character classes', function () {
+    chai.expect(
+      passwoid()
+    ).to.match(/[A-Z]/).and
+      .to.match(/[a-z]/).and
+      .to.match(/\d/);
+  });
 
-test('does not repeat characters', function (t) {
-  t.is(uniq(passwoid(16).split('')).length, 16);
-});
+  it('does not repeat characters', function () {
+    chai.expect(
+      uniq(passwoid(16).split('')).length
+    ).to.equal(16);
+  });
 
-test('repeats characters', function (t) {
-  t.not(uniq(passwoid(64).split('')).length, 64);
-});
+  it('repeats characters', function () {
+    chai.expect(
+      uniq(passwoid(64).split('')).length
+    ).not.to.equal(64);
+  });
 
-test('passwords are not identical', function (t) {
-  var password1 = passwoid();
-  var password2 = passwoid();
-  t.not(password1, password2);
+  it('passwords are not identical', function () {
+    var password1 = passwoid();
+    var password2 = passwoid();
+    chai.expect(password1).not.to.equal(password2);
+  });
 });

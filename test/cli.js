@@ -11,38 +11,47 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
+/* eslint-env mocha */
 
 'use strict';
 
-var test = require('ava');
+var chai = require('chai');
 var stream = require('mock-utf8-stream');
 var cli = require('../lib/cli');
 
-test('default length', function (t) {
-  var stdout = new stream.MockWritableStream();
-  stdout.startCapture();
-  cli({argv: ['node', 'bin.js'], stdout: stdout});
-  t.is(stdout.capturedData.trim().length, 16);
-});
+describe('passwoid', function () {
+  it('default length', function () {
+    var stdout = new stream.MockWritableStream();
+    stdout.startCapture();
+    cli({argv: ['node', 'bin.js'], stdout: stdout});
+    chai.expect(
+      stdout.capturedData.trim().length
+    ).to.equal(16);
+  });
 
-test('specific length', function (t) {
-  var stdout = new stream.MockWritableStream();
-  stdout.startCapture();
-  cli({argv: ['node', 'bin.js', 8], stdout: stdout});
-  t.is(stdout.capturedData.trim().length, 8);
-});
+  it('specific length', function () {
+    var stdout = new stream.MockWritableStream();
+    stdout.startCapture();
+    cli({argv: ['node', 'bin.js', 8], stdout: stdout});
+    chai.expect(
+      stdout.capturedData.trim().length
+    ).to.equal(8);
+  });
 
-test('bogus length', function (t) {
-  var stdout = new stream.MockWritableStream();
-  stdout.startCapture();
-  cli({argv: ['node', 'bin.js', 'pants'], stdout: stdout});
-  t.is(stdout.capturedData.trim().length, 16);
-});
+  it('bogus length', function () {
+    var stdout = new stream.MockWritableStream();
+    stdout.startCapture();
+    cli({argv: ['node', 'bin.js', 'pants'], stdout: stdout});
+    chai.expect(
+      stdout.capturedData.trim().length
+    ).to.equal(16);
+  });
 
-test('length too short', function (t) {
-  var stdout = new stream.MockWritableStream();
-  stdout.startCapture();
-  t.throws(function () {
-    cli({argv: ['node', 'bin.js', 1], stdout: stdout});
-  }, 'Cannot generate password of length 1');
+  it('length too short', function () {
+    var stdout = new stream.MockWritableStream();
+    stdout.startCapture();
+    chai.expect(function () {
+      cli({argv: ['node', 'bin.js', 1], stdout: stdout});
+    }).to.throw('Cannot generate password of length 1');
+  });
 });

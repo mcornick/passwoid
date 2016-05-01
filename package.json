@@ -8,7 +8,8 @@
   ],
   "scripts": {
     "release": "standard-version",
-    "test": "xo && nyc ava && alex"
+    "prepublish": "gulp prepublish",
+    "test": "gulp"
   },
   "author": {
     "name": "Mark Cornick",
@@ -29,18 +30,26 @@
   },
   "homepage": "http://passwoid.pw/",
   "devDependencies": {
-    "alex": "^2.0.0",
-    "ava": "^0.14.0",
-    "coveralls": "^2.11.4",
+    "chai": "^3.5.0",
     "cz-conventional-changelog": "^1.1.5",
+    "eslint": "^2.1.0",
+    "eslint-config-xo-space": "^0.12.0",
+    "gulp": "^3.9.0",
+    "gulp-coveralls": "^0.1.0",
+    "gulp-eslint": "^2.0.0",
+    "gulp-exclude-gitignore": "^1.0.0",
+    "gulp-istanbul": "^0.10.3",
+    "gulp-line-ending-corrector": "^1.0.1",
+    "gulp-mocha": "^2.0.0",
+    "gulp-nsp": "^2.1.0",
+    "gulp-plumber": "^1.0.0",
+    "gulp-xo": "^0.11.0",
     "lodash.uniq": "^4.0.1",
     "mock-utf8-stream": "^0.1.1",
-    "nyc": "^6.0.0",
-    "standard-version": "^2.1.2",
-    "xo": "^0.15.0"
+    "standard-version": "^2.1.2"
   },
-  "xo": {
-    "space": true
+  "eslintConfig": {
+    "extends": "xo-space"
   },
   "config": {
     "commitizen": {
