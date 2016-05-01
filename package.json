@@ -43,7 +43,6 @@
     "gulp-mocha": "^2.0.0",
     "gulp-nsp": "^2.1.0",
     "gulp-plumber": "^1.0.0",
-    "gulp-xo": "^0.11.0",
     "lodash.uniq": "^4.0.1",
     "mock-utf8-stream": "^0.1.1",
     "standard-version": "^2.1.2"
