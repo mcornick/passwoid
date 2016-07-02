@@ -32,8 +32,7 @@
   "devDependencies": {
     "chai": "^3.5.0",
     "cz-conventional-changelog": "^1.1.5",
-    "eslint": "^2.1.0",
-    "eslint-config-xo-space": "^0.14.0",
+    "eslint": "^3.0.0",
     "gulp": "^3.9.0",
     "gulp-coveralls": "^0.1.0",
     "gulp-eslint": "^2.0.0",
@@ -46,9 +45,6 @@
     "lodash.uniq": "^4.0.1",
     "mock-utf8-stream": "^0.1.1",
     "standard-version": "^2.1.2"
-  },
-  "eslintConfig": {
-    "extends": "xo-space"
   },
   "config": {
     "commitizen": {
