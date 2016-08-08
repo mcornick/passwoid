@@ -1,6 +1,6 @@
 {
   "name": "passwoid",
-  "version": "4.0.4",
+  "version": "4.0.5",
   "description": "A reasonably secure password generator",
   "keywords": [
     "random",
