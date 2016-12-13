@@ -15,36 +15,36 @@
 
 'use strict';
 
-var chai = require('chai');
-var uniq = require('lodash.uniq');
-var passwoid = require('../lib/passwoid');
+const chai = require('chai');
+const uniq = require('lodash.uniq');
+const passwoid = require('../lib/passwoid');
 
-describe('passwoid', function () {
-  it('default length', function () {
+describe('passwoid', () => {
+  it('default length', () => {
     chai.expect(
       passwoid().length
     ).to.equal(16);
   });
 
-  it('specific length', function () {
+  it('specific length', () => {
     chai.expect(
       passwoid(8).length
     ).to.equal(8);
   });
 
-  it('length longer than pool length', function () {
+  it('length longer than pool length', () => {
     chai.expect(
       passwoid(64).length
     ).to.equal(64);
   });
 
-  it('length too short', function () {
-    chai.expect(function () {
+  it('length too short', () => {
+    chai.expect(() => {
       passwoid(1);
     }).to.throw('Cannot generate password of length 1');
   });
 
-  it('all three character classes', function () {
+  it('all three character classes', () => {
     chai.expect(
       passwoid()
     ).to.match(/[A-Z]/).and
@@ -52,21 +52,21 @@ describe('passwoid', function () {
       .to.match(/\d/);
   });
 
-  it('does not repeat characters', function () {
+  it('does not repeat characters', () => {
     chai.expect(
       uniq(passwoid(16).split('')).length
     ).to.equal(16);
   });
 
-  it('repeats characters', function () {
+  it('repeats characters', () => {
     chai.expect(
       uniq(passwoid(64).split('')).length
     ).not.to.equal(64);
   });
 
-  it('passwords are not identical', function () {
-    var password1 = passwoid();
-    var password2 = passwoid();
+  it('passwords are not identical', () => {
+    const password1 = passwoid();
+    const password2 = passwoid();
     chai.expect(password1).not.to.equal(password2);
   });
 });

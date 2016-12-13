@@ -16,7 +16,7 @@
 
 'use strict';
 
-var cli = require('./lib/cli');
+const cli = require('./dist/cli');
 
 cli({
   stdout: process.stdout,

@@ -15,43 +15,43 @@
 
 'use strict';
 
-var chai = require('chai');
-var stream = require('mock-utf8-stream');
-var cli = require('../lib/cli');
+const chai = require('chai');
+const stream = require('mock-utf8-stream');
+const cli = require('../lib/cli');
 
-describe('passwoid', function () {
-  it('default length', function () {
-    var stdout = new stream.MockWritableStream();
+describe('passwoid', () => {
+  it('default length', () => {
+    const stdout = new stream.MockWritableStream();
     stdout.startCapture();
-    cli({argv: ['node', 'bin.js'], stdout: stdout});
+    cli({argv: ['node', 'bin.js'], stdout});
     chai.expect(
       stdout.capturedData.trim().length
     ).to.equal(16);
   });
 
-  it('specific length', function () {
-    var stdout = new stream.MockWritableStream();
+  it('specific length', () => {
+    const stdout = new stream.MockWritableStream();
     stdout.startCapture();
-    cli({argv: ['node', 'bin.js', 8], stdout: stdout});
+    cli({argv: ['node', 'bin.js', 8], stdout});
     chai.expect(
       stdout.capturedData.trim().length
     ).to.equal(8);
   });
 
-  it('bogus length', function () {
-    var stdout = new stream.MockWritableStream();
+  it('bogus length', () => {
+    const stdout = new stream.MockWritableStream();
     stdout.startCapture();
-    cli({argv: ['node', 'bin.js', 'pants'], stdout: stdout});
+    cli({argv: ['node', 'bin.js', 'pants'], stdout});
     chai.expect(
       stdout.capturedData.trim().length
     ).to.equal(16);
   });
 
-  it('length too short', function () {
-    var stdout = new stream.MockWritableStream();
+  it('length too short', () => {
+    const stdout = new stream.MockWritableStream();
     stdout.startCapture();
-    chai.expect(function () {
-      cli({argv: ['node', 'bin.js', 1], stdout: stdout});
+    chai.expect(() => {
+      cli({argv: ['node', 'bin.js', 1], stdout});
     }).to.throw('Cannot generate password of length 1');
   });
 });
