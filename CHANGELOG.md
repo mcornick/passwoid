@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="5.0.0"></a>
+# [5.0.0](https://github.com/passwoid/passwoid/compare/v4.0.5...v5.0.0) (2016-12-16)
+
+
+### Features
+
+* **es2015:** convert codebase to ES2015 ([ea7be1d](https://github.com/passwoid/passwoid/commit/ea7be1d))
+
+
+### BREAKING CHANGES
+
+* es2015: passwoid no longer supports Node versions less than
+4.0.0.
+
+
+
 <a name="4.0.5"></a>
 ## [4.0.5](https://github.com/passwoid/passwoid/compare/v4.0.4...v4.0.5) (2016-08-08)
 
