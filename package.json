@@ -64,9 +64,6 @@
       "path": "cz-conventional-changelog"
     }
   },
-  "eslintConfig": {
-    "extends": "xo-space"
-  },
   "engines": {
     "node": ">= 4.0.0"
   }
