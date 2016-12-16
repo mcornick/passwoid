@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="5.0.1"></a>
+## [5.0.1](https://github.com/passwoid/passwoid/compare/v5.0.0...v5.0.1) (2016-12-16)
+
+
+### Bug Fixes
+
+* **eslint:** fix redundant/conflicting eslint config ([7c9f99a](https://github.com/passwoid/passwoid/commit/7c9f99a))
+
+
+
 <a name="5.0.0"></a>
 # [5.0.0](https://github.com/passwoid/passwoid/compare/v4.0.5...v5.0.0) (2016-12-16)
 
