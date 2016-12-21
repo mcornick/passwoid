@@ -66,5 +66,20 @@
   },
   "engines": {
     "node": ">= 4.0.0"
+  },
+  "babel": {
+    "presets": [
+      "es2015"
+    ]
+  },
+  "eslintConfig": {
+    "env": {
+      "node": true
+    },
+    "extends": "xo-space",
+    "parserOptions": {
+      "ecmaVersion": 6
+    },
+    "rules": {}
   }
 }
