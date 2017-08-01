@@ -65,5 +65,5 @@ gulp.task('babel', ['clean'], () => gulp.src('lib/**/*.js')
 
 gulp.task('clean', () => del('dist'));
 
-gulp.task('prepublish', ['nsp', 'babel']);
+gulp.task('prepare', ['nsp', 'babel']);
 gulp.task('default', ['static', 'test', 'coveralls']);

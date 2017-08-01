@@ -8,7 +8,7 @@
   ],
   "scripts": {
     "release": "standard-version",
-    "prepublish": "gulp prepublish",
+    "prepare": "gulp prepare",
     "test": "gulp"
   },
   "author": {
