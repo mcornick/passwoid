@@ -12,8 +12,8 @@
   },
   "author": {
     "name": "Mark Cornick",
-    "email": "passwoid@passwoid.pw",
-    "url": "http://passwoid.pw/"
+    "email": "mark@markcornick.com",
+    "url": "https://markcornick.com/"
   },
   "license": "Apache-2.0",
   "files": ["bin.js", "lib"],
@@ -23,12 +23,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/passwoid/passwoid.git"
+    "url": "git+https://github.com/markcornick/passwoid.git"
   },
   "bugs": {
-    "url": "https://github.com/passwoid/passwoid/issues"
+    "url": "https://github.com/markcornick/passwoid/issues"
   },
-  "homepage": "http://passwoid.pw/",
+  "homepage": "https://github.com/markcornick/passwoid",
   "devDependencies": {
     "cz-conventional-changelog": "^2.1.0",
     "eslint": "^4.1.0",
