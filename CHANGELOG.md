@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="6.0.0"></a>
+# [6.0.0](https://github.com/passwoid/passwoid/compare/v5.0.2...v6.0.0) (2017-12-07)
+
+
+### Styles
+
+* **tools:** Overhaul and upgrade tooling ([1e5b297](https://github.com/passwoid/passwoid/commit/1e5b297))
+
+
+### BREAKING CHANGES
+
+* **tools:** Removal of babel eliminates support for Node < 4.
+
+
+
 <a name="5.0.2"></a>
 ## [5.0.2](https://github.com/passwoid/passwoid/compare/v5.0.1...v5.0.2) (2016-12-21)
 
