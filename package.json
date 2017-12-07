@@ -2,14 +2,13 @@
   "name": "passwoid",
   "version": "5.0.2",
   "description": "A reasonably secure password generator",
-  "keywords": [
-    "random",
-    "password"
-  ],
+  "keywords": ["random", "password"],
   "scripts": {
+    "precommit": "lint-staged",
+    "prepare": "nsp check",
+    "pretest": "eslint .",
     "release": "standard-version",
-    "prepare": "gulp prepare",
-    "test": "gulp"
+    "test": "jest"
   },
   "author": {
     "name": "Mark Cornick",
@@ -17,11 +16,8 @@
     "url": "http://passwoid.pw/"
   },
   "license": "Apache-2.0",
-  "files": [
-    "bin.js",
-    "dist"
-  ],
-  "main": "dist/passwoid.js",
+  "files": ["bin.js", "lib"],
+  "main": "lib/index.js",
   "bin": {
     "passwoid": "bin.js"
   },
@@ -34,29 +30,19 @@
   },
   "homepage": "http://passwoid.pw/",
   "devDependencies": {
-    "babel-core": "^6.25.0",
-    "babel-eslint": "^7.2.3",
-    "babel-preset-es2015": "^6.24.1",
-    "babel-register": "^6.24.1",
-    "chai": "^4.1.0",
-    "cz-conventional-changelog": "^2.0.0",
-    "del": "^3.0.0",
-    "eslint": "^4.3.0",
-    "eslint-config-xo-space": "^0.16.0",
-    "eslint-plugin-babel": "^4.1.2",
-    "gulp": "^3.9.1",
-    "gulp-babel": "^6.1.2",
-    "gulp-coveralls": "^0.1.4",
-    "gulp-eslint": "^4.0.0",
-    "gulp-exclude-gitignore": "^1.1.1",
-    "gulp-istanbul": "^1.1.2",
-    "gulp-line-ending-corrector": "^1.0.1",
-    "gulp-mocha": "^3.0.1",
-    "gulp-nsp": "^2.4.2",
-    "gulp-plumber": "^1.1.0",
-    "isparta": "^4.0.0",
+    "cz-conventional-changelog": "^2.1.0",
+    "eslint": "^4.1.0",
+    "eslint-config-prettier": "^2.4.0",
+    "eslint-config-xo": "^0.18.2",
+    "eslint-plugin-prettier": "^2.2.0",
+    "husky": "^0.14.3",
+    "jest": "^21.0.0",
+    "jest-cli": "^21.0.0",
+    "lint-staged": "^4.2.1",
     "lodash.uniq": "^4.5.0",
     "mock-utf8-stream": "^0.1.1",
+    "nsp": "^2.6.3",
+    "prettier": "^1.7.0",
     "standard-version": "^4.2.0"
   },
   "config": {
@@ -67,19 +53,28 @@
   "engines": {
     "node": ">= 4.0.0"
   },
-  "babel": {
-    "presets": [
-      "es2015"
-    ]
-  },
   "eslintConfig": {
     "env": {
+      "jest": true,
       "node": true
     },
-    "extends": "xo-space",
-    "parserOptions": {
-      "ecmaVersion": 6
-    },
-    "rules": {}
+    "extends": ["xo", "prettier"],
+    "plugins": ["prettier"],
+    "rules": {
+      "prettier/prettier": [
+        "error",
+        {
+          "printWidth": 90,
+          "singleQuote": true
+        }
+      ]
+    }
+  },
+  "jest": {
+    "testEnvironment": "node"
+  },
+  "lint-staged": {
+    "*.js": ["eslint --fix", "git add"],
+    "*.json": ["prettier --write", "git add"]
   }
 }
