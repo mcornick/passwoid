@@ -1,5 +1,7 @@
 #!/usr/bin/env node
 
+// SPDX-License-Identifier: Apache-2.0
+//
 // Copyright 2015, 2016 Mark Cornick
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
