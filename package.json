@@ -8,7 +8,6 @@
   ],
   "scripts": {
     "precommit": "lint-staged",
-    "prepare": "nsp check",
     "pretest": "eslint .",
     "release": "standard-version",
     "test": "jest"
@@ -47,7 +46,6 @@
     "lint-staged": "^4.2.1",
     "lodash.uniq": "^4.5.0",
     "mock-utf8-stream": "^0.1.1",
-    "nsp": "^2.6.3",
     "prettier": "^1.7.0",
     "standard-version": "^4.2.0"
   },
