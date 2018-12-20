@@ -13,11 +13,10 @@ former colleagues at Viget:
 Keep in mind that I'm not paid to write JavaScript code, so I'm doing this
 in my spare time, which means it might take me a while to respond. If
 you're not satisfied with my response to your problem with my free (as
-in beer and in speech) software, I will give you triple your $0.00 back.
+in beer and in speech) software, I will give you triple your \$0.00 back.
 
 When filing a pull request, please explain what you're changing and why.
-Please use [Prettier style][2] and add or update tests as needed. `npm
-test` will run tests, check style, and calculate coverage; make sure it
+Please use [Prettier style][2] and add or update tests as needed. `npm test` will run tests, check style, and calculate coverage; make sure it
 passes, and that coverage does not drop below 100%. Please limit your
 changes to the specific thing you're fixing and isolate your changes in
 a topic branch that I can merge without pulling in other stuff.
@@ -36,11 +35,7 @@ conduct.
 Thanks for contributing!
 
 [1]: https://viget.com/extend/tips-for-writing-better-bug-reports
-
 [2]: https://prettier.io
-
 [3]: http://contributor-covenant.org
-
 [4]: https://github.com/conventional-changelog/conventional-changelog-angular/blob/master/convention.md
-
 [5]: https://commitizen.github.io/cz-cli/

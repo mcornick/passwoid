@@ -32,9 +32,9 @@ npm install --global passwoid
 ## Programmatic Usage
 
 ```js
-var passwoid = require('passwoid');
+var passwoid = require("passwoid");
 
-passwoid();  // returns a password of the default length (16)
+passwoid(); // returns a password of the default length (16)
 passwoid(8); // returns a password of length 8
 passwoid(1); // throws Error: Cannot generate password of length 1
 ```
@@ -67,23 +67,13 @@ passwoid is available as open source under the terms of the [Apache License][7]
 version 2.0.
 
 [1]: https://travis-ci.org/passwoid/passwoid.svg
-
 [2]: https://coveralls.io/repos/github/passwoid/passwoid/badge.svg?branch=master
-
 [3]: https://travis-ci.org/passwoid/passwoid
-
 [4]: https://coveralls.io/github/passwoid/passwoid?branch=master
-
 [5]: https://github.com/passwoid/passwoid
-
 [6]: http://contributor-covenant.org
-
 [7]: http://www.apache.org/licenses/LICENSE-2.0
-
 [8]: https://img.shields.io/badge/commitizen-friendly-brightgreen.svg
-
 [9]: https://commitizen.github.io/cz-cli/
-
 [10]: https://img.shields.io/npm/v/passwoid.svg
-
 [11]: https://www.npmjs.com/package/passwoid
