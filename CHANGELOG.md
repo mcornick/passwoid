@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="6.0.4"></a>
+## [6.0.4](https://github.com/markcornick/passwoid/compare/v6.0.3...v6.0.4) (2018-12-20)
+
+
+### Bug Fixes
+
+* **audit:** Fix `npm audit` findings ([af3f5a6](https://github.com/markcornick/passwoid/commit/af3f5a6))
+
+
+
 <a name="6.0.3"></a>
 ## [6.0.3](https://github.com/markcornick/passwoid/compare/v6.0.1...v6.0.3) (2017-12-07)
 
