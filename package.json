@@ -69,13 +69,7 @@
       "prettier"
     ],
     "rules": {
-      "prettier/prettier": [
-        "error",
-        {
-          "printWidth": 90,
-          "singleQuote": true
-        }
-      ]
+      "prettier/prettier": "error"
     }
   },
   "jest": {
