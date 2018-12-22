@@ -27,6 +27,7 @@ less.
 npm install --save passwoid
 # for command-line usage
 npm install --global passwoid
+# or use npx (see below)
 ```
 
 ## Programmatic Usage
@@ -39,7 +40,7 @@ passwoid(8); // returns a password of length 8
 passwoid(1); // throws Error: Cannot generate password of length 1
 ```
 
-## Command-Line Usage
+## Command-Line Usage With Global Install
 
 ```bash
 $ passwoid
@@ -52,6 +53,17 @@ $ passwoid 1
     ^
 Error: Cannot generate password of length 1
 [...]
+```
+
+## Command-Line Usage With `npx`
+
+```bash
+$ npx -q passwoid
+FPw4Mebtx6Nq7vj8
+$ npx -q passwoid 8
+mpr29ZoF
+$ npx -q passwoid 1
+Cannot generate password of length 1
 ```
 
 ## Contributing
