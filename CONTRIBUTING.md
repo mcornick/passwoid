@@ -16,7 +16,8 @@ you're not satisfied with my response to your problem with my free (as
 in beer and in speech) software, I will give you triple your \$0.00 back.
 
 When filing a pull request, please explain what you're changing and why.
-Please use [Prettier style][2] and add or update tests as needed. `npm test` will run tests, check style, and calculate coverage; make sure it
+Please use [Prettier style][2] and add or update tests as needed.
+`npm test` will run tests, check style, and calculate coverage; make sure it
 passes, and that coverage does not drop below 100%. Please limit your
 changes to the specific thing you're fixing and isolate your changes in
 a topic branch that I can merge without pulling in other stuff.
