@@ -29,6 +29,8 @@ Examples of unacceptable behavior by participants include:
 - The use of sexualized language or imagery and unwelcome sexual attention or
   advances
 
+<!--alex disable attacks-->
+
 - Trolling, insulting/derogatory comments, and personal or political attacks
 
 - Public or private harassment
@@ -44,6 +46,8 @@ Examples of unacceptable behavior by participants include:
 Project maintainers are responsible for clarifying the standards of acceptable
 behavior and are expected to take appropriate and fair corrective action in
 response to any instances of unacceptable behavior.
+
+<!--alex disable reject-->
 
 Project maintainers have the right and responsibility to remove, edit, or reject
 comments, commits, code, wiki edits, issues, and other contributions that are
@@ -68,6 +72,8 @@ will be reviewed and investigated and will result in a response that is deemed
 necessary and appropriate to the circumstances. The project team is obligated to
 maintain confidentiality with regard to the reporter of an incident. Further
 details of specific enforcement policies may be posted separately.
+
+<!--alex disable faith-->
 
 Project maintainers who do not follow or enforce the Code of Conduct in good
 faith may face temporary or permanent repercussions as determined by other
