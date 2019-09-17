@@ -90,5 +90,8 @@
       "pre-commit": "npm test && lint-staged",
       "pre-push": "npm test"
     }
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/@markcornick"
   }
 }
