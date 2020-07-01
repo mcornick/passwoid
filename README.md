@@ -1,3 +1,7 @@
+# Maintenance Mode
+
+passwoid is feature-complete and no longer under active development.
+
 # passwoid
 
 [![Build Status][10]][11] [![Build Status][1]][3]
