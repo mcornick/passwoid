@@ -13,8 +13,8 @@
   },
   "author": {
     "name": "Mark Cornick",
-    "email": "mark@markcornick.com",
-    "url": "https://markcornick.com/"
+    "email": "mark@mcornick.com",
+    "url": "https://mcornick.com/"
   },
   "license": "Apache-2.0",
   "files": [
@@ -27,12 +27,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/markcornick/passwoid.git"
+    "url": "git+https://github.com/mcornick/passwoid.git"
   },
   "bugs": {
-    "url": "https://github.com/markcornick/passwoid/issues"
+    "url": "https://github.com/mcornick/passwoid/issues"
   },
-  "homepage": "https://github.com/markcornick/passwoid",
+  "homepage": "https://github.com/mcornick/passwoid",
   "devDependencies": {
     "cz-conventional-changelog": "^2.1.0",
     "eslint": "^8.0.0",
@@ -90,8 +90,5 @@
       "pre-commit": "npm test && lint-staged",
       "pre-push": "npm test"
     }
-  },
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/@markcornick"
   }
 }
