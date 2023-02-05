@@ -1,6 +1,15 @@
-# Change Log
+# Changelog
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+
+### [6.0.5](https://github.com/mcornick/passwoid/compare/v6.0.4...v6.0.5) (2023-02-05)
+
+
+### Bug Fixes
+
+* **audit:** Fix `npm audit` findings ([612762d](https://github.com/mcornick/passwoid/commit/612762d1b2e3a795e18c99617a4adc1f19b69f40))
+* **github:** markcornick -> mcornick ([421ceca](https://github.com/mcornick/passwoid/commit/421cecae2c5f32358ba31b1bf25373f9722efacb))
+* **Math:** Math.floor instead of parseInt ([0d429b3](https://github.com/mcornick/passwoid/commit/0d429b3eafe518f54e376ab681d935e9e1ed7896))
 
 <a name="6.0.4"></a>
 ## [6.0.4](https://github.com/markcornick/passwoid/compare/v6.0.3...v6.0.4) (2018-12-20)
